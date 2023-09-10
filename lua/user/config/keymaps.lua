@@ -77,6 +77,9 @@ vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
 -- Mason
 vim.keymap.set("n", "<leader>m", "<cmd>Mason<cr>", { desc = "Mason" })
 
+-- LspInfo
+vim.keymap.set("n", "<leader>i", "<cmd>LspInfo<cr>", { desc = "Lsp Info" })
+
 -- File
 vim.keymap.set("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find Files" })
@@ -89,6 +92,7 @@ vim.keymap.set("n", "<leader>bf", "<cmd>Format<cr>", { desc = "Format Buffer" })
 vim.keymap.set("n", "<leader>bd", "<cmd>bd<cr>", { desc = "Delete Buffer" })
 vim.keymap.set("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 vim.keymap.set("n", "<leader>bp", "<cmd>bprev<cr>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<leader>ba", "ggVG", { desc = "Select All" })
 
 -- Window
 vim.keymap.set("n", "<leader>wh", "<cmd>split<cr>", { desc = "Horizontal Split" })
@@ -102,7 +106,7 @@ vim.keymap.set("n", "<leader>wq", "<cmd>:q<cr>", { desc = "Close Window" })
 -- Terminal
 vim.keymap.set("n", "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", { desc = "Float" })
 vim.keymap.set("n", "<leader>th", "<cmd>ToggleTerm size=15 direction=horizontal<cr>", { desc = "Horizontal" })
-vim.keymap.set("n", "<leader>tv", "<cmd>ToggleTerm size=40 direction=vertical<cr>", { desc = "Vertical" })
+vim.keymap.set("n", "<leader>tv", "<cmd>ToggleTerm size=50 direction=vertical<cr>", { desc = "Vertical" })
 vim.keymap.set({ "n", "t" }, "<leader>tt", "<cmd>ToggleTerm<cr>", { desc = "Toggle" })
 
 -- Diagnostics

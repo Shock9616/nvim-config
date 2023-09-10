@@ -77,6 +77,11 @@ return {
 		opts = {},
 	},
 	{
+		"akinsho/toggleterm.nvim",
+		version = "*",
+		config = true,
+	},
+	{
 		-- Pretty diagnostics list
 		"folke/trouble.nvim",
 		opts = {},
