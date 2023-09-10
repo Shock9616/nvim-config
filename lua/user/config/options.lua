@@ -55,3 +55,9 @@ vim.opt.splitright = true -- Vertical split right of current window
 vim.opt.laststatus = 0
 vim.opt.list = true
 vim.opt.spelllang = { "en" }
+
+-- Set python3 executable
+vim.g.python3_host_prog = "~/.config/nvim/py3nvim-3.11.1/bin/python3"
+
+-- Disable unused language providers
+vim.g.loaded_perl_provider = 0

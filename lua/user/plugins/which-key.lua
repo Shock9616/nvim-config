@@ -29,6 +29,7 @@ return {
                 b = "+Buffer",
                 f = "+File",
                 h = "+Harpoon",
+                l = "+LSP",
                 t = "+Terminal",
                 w = "+Window",
                 x = "+Diagnostics",
