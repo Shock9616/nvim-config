@@ -20,9 +20,9 @@ vim.opt.wrap = false -- Disable line wrap
 vim.opt.autowrite = true
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = ".nvim/undodir/"
-vim.opt.undofile = true
-vim.opt.undolevels = 10000
+-- vim.opt.undodir = ".nvim/undodir/"
+-- vim.opt.undofile = true
+-- vim.opt.undolevels = 10000
 vim.opt.confirm = true -- Confirm to save changes before exiting modified buffer
 
 vim.opt.ignorecase = true

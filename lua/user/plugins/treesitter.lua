@@ -8,22 +8,24 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
-		opts = {
-			highlight = {
-				enable = true,
-			},
-			ensure_installed = {
-				"lua",
-				"vim",
-				"vimdoc",
-				"python",
-				"rust",
-				"swift",
-				"c",
-				"c++",
-				"bash",
-			},
-		},
+		config = function()
+			require("nvim-treesitter.configs").setup({
+				highlight = {
+					enable = true,
+				},
+				ensure_installed = {
+					"lua",
+					"vim",
+					"vimdoc",
+					"python",
+					"rust",
+					"swift",
+					"c",
+					"cpp",
+					"bash",
+				},
+			})
+		end,
 	},
 
 	{
