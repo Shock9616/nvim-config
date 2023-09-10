@@ -112,3 +112,14 @@ vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",
 vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { desc = "Quickfixes" })
 vim.keymap.set("n", "<leader>xn", "<cmd>vim.diagnostic.get_next()", { desc = "Next Diagnostic" })
 vim.keymap.set("n", "<leader>xp", "<cmd>vim.diagnostic.get_prev()", { desc = "Previous Diagnostic" })
+
+-- Harpoon
+vim.keymap.set("n", "<leader>hm", "<cmd>lua require('harpoon.mark').add_file()<cr>", { desc = "Mark File" })
+vim.keymap.set("n", "<leader>hh", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", { desc = "Quick Menu" })
+vim.keymap.set("n", "<leader>hn", "<cmd>lua require('harpoon.ui').nav_next()<cr>", { desc = "Next File" })
+vim.keymap.set("n", "<leader>hp", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", { desc = "Previous File" })
+
+vim.keymap.set("n", "<leader>ha", "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", { desc = "File 1" })
+vim.keymap.set("n", "<leader>hs", "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", { desc = "File 2" })
+vim.keymap.set("n", "<leader>hd", "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", { desc = "File 3" })
+vim.keymap.set("n", "<leader>hf", "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", { desc = "File 4" })
