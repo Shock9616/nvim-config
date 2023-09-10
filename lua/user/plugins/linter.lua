@@ -1,3 +1,9 @@
+--
+-- linter.lua
+--
+-- Setup language linters
+--
+
 return {
 	"mfussenegger/nvim-lint",
 	config = function()

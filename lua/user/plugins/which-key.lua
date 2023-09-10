@@ -1,3 +1,9 @@
+--
+-- which-key.lua
+--
+-- Keybindings cheat sheet
+--
+
 return {
     "folke/which-key.nvim",
     event = "VeryLazy",

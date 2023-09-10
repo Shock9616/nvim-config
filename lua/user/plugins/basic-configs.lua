@@ -6,30 +6,36 @@
 
 return {
 	{
+		-- Automatic pairing of parens/quotes/etc
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
 		opts = {},
 	},
 	{
+		-- Nice tab bar
 		"akinsho/bufferline.nvim",
 		opts = {},
 	},
 	{
+		-- Better commenting
 		"numToStr/Comment.nvim",
 		opts = {},
 		lazy = false,
 	},
 	{
+		-- LSP Notifications
 		"j-hui/fidget.nvim",
 		tag = "legacy",
 		event = "LspAttach",
 		opts = {},
 	},
 	{
+		-- Git gutter
 		"lewis6991/gitsigns.nvim",
 		opts = {},
 	},
 	{
+		-- Quick file switching
 		"ThePrimeagen/harpoon",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -37,43 +43,52 @@ return {
 		opts = {},
 	},
 	{
+		-- Indent guides
 		"lukas-reineke/indent-blankline.nvim",
 		opts = {},
 	},
 	{
+		-- Live preview markdown files in browser
 		"iamcco/markdown-preview.nvim",
 		config = function()
 			vim.fn["mkdp#util#install"]()
 		end,
 	},
 	{
+		-- File explorer
 		"nvim-tree/nvim-tree.lua",
 		opts = {},
 	},
 	{
+		-- Discord rich presence because why the heck not?
 		"andweeb/presence.nvim",
 		opts = {},
 	},
 	{
+		-- Better Rust support
 		"simrat39/rust-tools.nvim",
 		ft = "rust",
 	},
 	{
+		-- Epic fuzzy finder
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.2",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = {},
 	},
 	{
+		-- Pretty diagnostics list
 		"folke/trouble.nvim",
 		opts = {},
 	},
 	{
+		-- Typst support
 		"kaarmu/typst.vim",
 		ft = "typst",
 		opts = {},
 	},
 	{
+		-- Language-specific indent width
 		"tpope/vim-sleuth",
 	},
 }

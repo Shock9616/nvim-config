@@ -1,3 +1,9 @@
+--
+-- vim-markdown.lua
+-- 
+-- Markdown support
+--
+
 return {
     "preservim/vim-markdown",
     dependencies = {

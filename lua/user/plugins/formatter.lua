@@ -1,3 +1,9 @@
+--
+-- formatter.lua
+--
+-- Setup language formatters
+--
+
 return {
 	"mhartington/formatter.nvim",
 	config = function()
@@ -15,21 +21,21 @@ return {
 				rust = {
 					require("formatter.filetypes.rust").rustfmt,
 				},
-                c = {
-                    require("formatter.filetypes.c").clang_format
-                },
-                cpp = {
-                    require("formatter.filetypes.cpp").clang_format
-                },
-                java = {
-                    require("formatter.filetypes.java").clang_format
-                },
-                javascript = {
-                    require("formatter.filetypes.javascript").clang_format
-                },
-                sh = {
-                    require("formatter.filetypes.sh").shfmt
-                },
+				c = {
+					require("formatter.filetypes.c").clang_format,
+				},
+				cpp = {
+					require("formatter.filetypes.cpp").clang_format,
+				},
+				java = {
+					require("formatter.filetypes.java").clang_format,
+				},
+				javascript = {
+					require("formatter.filetypes.javascript").clang_format,
+				},
+				sh = {
+					require("formatter.filetypes.sh").shfmt,
+				},
 				["*"] = {
 					require("formatter.filetypes.any").remove_trailing_whitespace,
 				},

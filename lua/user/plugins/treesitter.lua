@@ -1,3 +1,9 @@
+--
+-- treesitter.lua
+--
+-- Better syntax highlighting
+--
+
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",

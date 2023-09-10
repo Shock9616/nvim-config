@@ -1,3 +1,9 @@
+--
+-- colourscheme.lua
+--
+-- Custom colourscheme!
+--
+
 return {
 	"Shatur/neovim-ayu",
 	config = function()

@@ -1,3 +1,9 @@
+--
+-- noice.lua
+--
+-- Cool cmdline and notifications!
+--
+
 return {
     "folke/noice.nvim",
     event = "VeryLazy",

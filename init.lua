@@ -1,4 +1,6 @@
 --
+-- init.lua
+--
 -- Kaleb Rosborough's Neovim Config
 --
 

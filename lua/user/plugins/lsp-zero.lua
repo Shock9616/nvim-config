@@ -1,3 +1,9 @@
+--
+-- lsp-zero.lua
+--
+-- Non-painful LSP/cmp setup!
+--
+
 return {
 	"VonHeikemen/lsp-zero.nvim",
 	branch = "v2.x",
