@@ -28,6 +28,7 @@ return {
             ["<leader>"] = {
                 b = "+Buffer",
                 f = "+File",
+                h = "+Harpoon",
                 t = "+Terminal",
                 w = "+Window",
                 x = "+Diagnostics",
