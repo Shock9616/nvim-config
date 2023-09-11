@@ -60,6 +60,14 @@ return {
 		opts = {},
 	},
 	{
+		"stevearc/oil.nvim",
+		config = function ()
+			require("oil").setup()
+		end,
+		-- Optional dependencies
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
+	{
 		-- Discord rich presence because why the heck not?
 		"andweeb/presence.nvim",
 		opts = {},

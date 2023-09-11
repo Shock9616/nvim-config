@@ -82,7 +82,8 @@ vim.keymap.set("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find Files" })
 vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Live Grep" })
 vim.keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Recent Files" })
-vim.keymap.set("n", "<leader>fe", "<cmd>NvimTreeToggle<cr>", { desc = "File Explorer" })
+-- vim.keymap.set("n", "<leader>fe", "<cmd>NvimTreeToggle<cr>", { desc = "File Explorer" })
+vim.keymap.set("n", "<leader>fe", "<cmd>Oil<cr>", { desc = "File Explorer" })
 
 -- Buffer
 vim.keymap.set("n", "<leader>bf", "<cmd>Format<cr>", { desc = "Format Buffer" })
