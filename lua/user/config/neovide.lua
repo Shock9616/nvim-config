@@ -9,8 +9,8 @@ end
 vim.g.neovide_transparency = 0.0
 vim.g.transparency = 0.98
 vim.g.neovide_background_color = "#1F2430" .. alpha()
-vim.g.neovide_floating_blur_amount_x = 5.0
-vim.g.neovide_floating_blur_amount_y = 5.0
+vim.g.neovide_floating_blur_amount_x = 2.0
+vim.g.neovide_floating_blur_amount_y = 2.0
 
 -- Scroll Animation Length
 vim.g.neovide_scroll_animation_length = 0.2
