@@ -6,10 +6,11 @@
 
 return {
 	{
-		-- Automatic pairing of parens/quotes/etc
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-		opts = {},
+		-- Automatic pairing of parens/quotes/etc.
+		"altermo/ultimate-autopair.nvim",
+		event = { "InsertEnter", "CmdlineEnter" },
+		branch = "v0.6",
+		opts = {}
 	},
 	{
 		-- Nice tab bar
