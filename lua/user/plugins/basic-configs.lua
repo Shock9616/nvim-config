@@ -14,8 +14,8 @@ return {
 	},
 	{
 		-- Nice tab bar
-		"akinsho/bufferline.nvim",
-		opts = {},
+		-- "akinsho/bufferline.nvim",
+		-- opts = {},
 	},
 	{
 		-- Better commenting
