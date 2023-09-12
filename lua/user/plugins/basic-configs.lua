@@ -86,6 +86,11 @@ return {
 		opts = {},
 	},
 	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {},
+	},
+	{
 		"akinsho/toggleterm.nvim",
 		version = "*",
 		config = true,
