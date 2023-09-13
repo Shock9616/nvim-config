@@ -49,6 +49,12 @@ return {
 		opts = {},
 	},
 	{
+		"ggandor/leap.nvim",
+		config = function ()
+			require("leap").add_default_mappings()
+		end
+	},
+	{
 		-- Live preview markdown files in browser
 		"iamcco/markdown-preview.nvim",
 		config = function()

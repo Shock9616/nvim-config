@@ -1,4 +1,4 @@
-" Kaleb Rosborough's vanilla (Neo)Vim config
+" Kaleb Rosborough's barebones (Neo)Vim config
 
 " Enable syntax highlighting
 syntax on
