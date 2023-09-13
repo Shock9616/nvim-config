@@ -67,3 +67,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 		vim.fn.mkdir(vim.fn.fnamemodify(file, ":p:h"), "p")
 	end,
 })
+
+-- Not actually an autocmd, but this is MY config, I'll do what I want
+-- Replace 'xdate' with current date in mm/dd/yy format
+vim.cmd("iab xdate <c-r>=strftime('%m/%d/%y')<cr>")
