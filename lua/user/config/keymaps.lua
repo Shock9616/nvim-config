@@ -88,7 +88,7 @@ vim.keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Recen
 vim.keymap.set("n", "<leader>fe", "<cmd>Oil<cr>", { desc = "File Explorer" })
 
 -- Buffer
-vim.keymap.set("n", "<leader>bf", "<cmd>Format<cr>", { desc = "Format Buffer" })
+vim.keymap.set("n", "<leader>bf", "<cmd>lua require('conform').format()<cr>", { desc = "Format Buffer" })
 vim.keymap.set("n", "<leader>bd", "<cmd>bd<cr>", { desc = "Delete Buffer" })
 vim.keymap.set("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 vim.keymap.set("n", "<leader>bp", "<cmd>bprev<cr>", { desc = "Previous buffer" })
