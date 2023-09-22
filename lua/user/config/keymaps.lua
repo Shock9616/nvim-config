@@ -93,10 +93,11 @@ vim.keymap.set("n", "<leader>bd", "<cmd>bd<cr>", { desc = "Delete Buffer" })
 vim.keymap.set("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 vim.keymap.set("n", "<leader>bp", "<cmd>bprev<cr>", { desc = "Previous buffer" })
 vim.keymap.set("n", "<leader>ba", "ggVG", { desc = "Select All" })
+vim.keymap.set("n", "<leader>bc", "zz", { desc = "Center current line" })
 
 -- Window
 vim.keymap.set("n", "<leader>wh", "<cmd>split<cr>", { desc = "Horizontal Split" })
-vim.keymap.set("n", "<laeder>wv", "<cmd>vsplit<cr>", { desc = "Vertical Split" })
+vim.keymap.set("n", "<leader>wv", "<cmd>vsplit<cr>", { desc = "Vertical Split" })
 vim.keymap.set("n", "<leader>w<Up>", "<cmd>resize +10<cr>", { desc = "Increase Window Height" })
 vim.keymap.set("n", "<leader>w<Down>", "<cmd>resize -10<cr>", { desc = "Decrease Window Height" })
 vim.keymap.set("n", "<leader>w<Left>", "<cmd>vertical resize -10<cr>", { desc = "Decrease Window Width" })
