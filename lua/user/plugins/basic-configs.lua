@@ -10,7 +10,7 @@ return {
 		"altermo/ultimate-autopair.nvim",
 		event = { "InsertEnter", "CmdlineEnter" },
 		branch = "v0.6",
-		opts = {}
+		opts = {},
 	},
 	{
 		-- Nice tab bar
@@ -50,9 +50,9 @@ return {
 	},
 	{
 		"ggandor/leap.nvim",
-		config = function ()
+		config = function()
 			require("leap").add_default_mappings()
-		end
+		end,
 	},
 	{
 		-- Live preview markdown files in browser
@@ -68,7 +68,7 @@ return {
 	},
 	{
 		"stevearc/oil.nvim",
-		config = function ()
+		config = function()
 			require("oil").setup()
 		end,
 		-- Optional dependencies
