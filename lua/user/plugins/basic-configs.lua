@@ -13,11 +13,6 @@ return {
 		opts = {},
 	},
 	{
-		-- Nice tab bar
-		-- "akinsho/bufferline.nvim",
-		-- opts = {},
-	},
-	{
 		-- Better commenting
 		"numToStr/Comment.nvim",
 		opts = {},
@@ -46,7 +41,9 @@ return {
 	{
 		-- Indent guides
 		"lukas-reineke/indent-blankline.nvim",
-		opts = {},
+		config = function()
+			require("ibl").setup()
+		end,
 	},
 	{
 		"ggandor/leap.nvim",
