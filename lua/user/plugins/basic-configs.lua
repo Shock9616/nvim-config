@@ -39,16 +39,15 @@ return {
 		opts = {},
 	},
 	{
+		"lukas-reineke/headlines.nvim",
+		dependencies = "nvim-treesitter/nvim-treesitter",
+		config = true, -- or `opts = {}`
+	},
+	{
 		-- Indent guides
 		"lukas-reineke/indent-blankline.nvim",
 		config = function()
 			require("ibl").setup()
-		end,
-	},
-	{
-		"ggandor/leap.nvim",
-		config = function()
-			require("leap").add_default_mappings()
 		end,
 	},
 	{
@@ -101,12 +100,6 @@ return {
 	{
 		-- Pretty diagnostics list
 		"folke/trouble.nvim",
-		opts = {},
-	},
-	{
-		-- Typst support
-		"kaarmu/typst.vim",
-		ft = "typst",
 		opts = {},
 	},
 	{
