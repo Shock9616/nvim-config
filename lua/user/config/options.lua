@@ -15,6 +15,7 @@ vim.opt.termguicolors = true
 vim.opt.showmode = false -- Don't show mode bc we have a statusline
 vim.opt.signcolumn = "yes" -- Always show the signcolumn
 vim.opt.wrap = false -- Disable line wrap
+vim.opt.cursorline = true
 
 -- General options
 vim.opt.autowrite = true
@@ -36,7 +37,7 @@ vim.opt.inccommand = "nosplit" -- Preview incremental substitute
 vim.opt.pumblend = 10 -- Popup blend
 vim.opt.pumheight = 10 -- Maximum number of entries in a popup
 vim.opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize" }
-vim.opt.shortmess:append({ W = true, I = true, c = true })
+vim.opt.shortmess:append({ W = true, c = true })
 
 vim.opt.expandtab = true -- Use spaces instead of tabs
 vim.opt.shiftround = true -- Round indent to multiple of shiftwidth
