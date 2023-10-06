@@ -10,9 +10,8 @@ return {
 		build = ":TSUpdate",
 		config = function()
 			require("nvim-treesitter.configs").setup({
-				highlight = {
-					enable = true,
-				},
+				highlight = { enable = true },
+				indent = { enable = true },
 				ensure_installed = {
 					"lua",
 					"vim",
@@ -23,6 +22,10 @@ return {
 					"c",
 					"cpp",
 					"bash",
+					"javascript",
+					"html",
+					"css",
+					"java",
 				},
 			})
 		end,
