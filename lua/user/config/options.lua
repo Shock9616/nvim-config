@@ -53,7 +53,7 @@ vim.opt.splitbelow = true -- Horizontal split below current window
 vim.opt.splitright = true -- Vertical split right of current window
 
 vim.opt.laststatus = 0
-vim.opt.list = true
+vim.opt.list = false
 vim.opt.spelllang = { "en" }
 
 -- Set python3 executable
