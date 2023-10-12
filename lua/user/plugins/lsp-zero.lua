@@ -9,8 +9,8 @@ return {
 	branch = "v2.x",
 	dependencies = {
 		-- LSP Support
-		{ "neovim/nvim-lspconfig" }, -- Required
-		{ "williamboman/mason.nvim" }, -- Optional
+		{ "neovim/nvim-lspconfig" },       -- Required
+		{ "williamboman/mason.nvim" },     -- Optional
 		{ "williamboman/mason-lspconfig.nvim" }, -- Optional
 
 		-- Autocompletion
@@ -31,8 +31,9 @@ return {
 		require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
 		require("lspconfig").sourcekit.setup({
 			cmd = {
-				"/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
+				"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
 			},
+			filetypes = { "swift" },
 		})
 
 		lsp.setup()

@@ -47,7 +47,9 @@ return {
 		-- Indent guides
 		"lukas-reineke/indent-blankline.nvim",
 		config = function()
-			require("ibl").setup()
+			require("ibl").setup({
+				indent = { char = "│" },
+			})
 		end,
 	},
 	{
