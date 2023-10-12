@@ -89,7 +89,8 @@ vim.keymap.set("n", "<leader>fe", "<cmd>Oil<cr>", { desc = "File Explorer" })
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
 
 -- Buffer
-vim.keymap.set("n", "<leader>bf", "<cmd>lua require('conform').format()<cr>", { desc = "Format Buffer" })
+-- vim.keymap.set("n", "<leader>bf", "<cmd>lua require('conform').format()<cr>", { desc = "Format Buffer" })
+vim.keymap.set("n", "<leader>bf", "<cmd>lua vim.lsp.buf.format()<cr>", { desc = "Format Buffer" })
 vim.keymap.set("n", "<leader>bd", "<cmd>bd<cr>", { desc = "Delete Buffer" })
 vim.keymap.set("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 vim.keymap.set("n", "<leader>bp", "<cmd>bprev<cr>", { desc = "Previous buffer" })
