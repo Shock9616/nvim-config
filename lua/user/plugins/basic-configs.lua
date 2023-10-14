@@ -6,13 +6,6 @@
 
 return {
 	{
-		-- Automatic pairing of parens/quotes/etc.
-		"altermo/ultimate-autopair.nvim",
-		event = { "InsertEnter", "CmdlineEnter" },
-		branch = "v0.6",
-		opts = {},
-	},
-	{
 		-- Better commenting
 		"numToStr/Comment.nvim",
 		opts = {},
@@ -28,20 +21,14 @@ return {
 	{
 		-- Git gutter
 		"lewis6991/gitsigns.nvim",
-		opts = {},
-	},
-	{
-		-- Quick file switching
-		"ThePrimeagen/harpoon",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
+		event = { "BufReadPre", "BufNewFile" },
 		opts = {},
 	},
 	{
 		"lukas-reineke/headlines.nvim",
 		dependencies = "nvim-treesitter/nvim-treesitter",
-		config = true, -- or `opts = {}`
+		ft = "markdown",
+		opts = {},
 	},
 	{
 		-- Indent guides
@@ -58,11 +45,14 @@ return {
 		config = function()
 			vim.fn["mkdp#util#install"]()
 		end,
+		ft = "markdown",
 	},
 	{
-		-- File explorer
-		"nvim-tree/nvim-tree.lua",
-		opts = {},
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		opts = {
+			check_ts = true,
+		},
 	},
 	{
 		"stevearc/oil.nvim",
@@ -90,11 +80,6 @@ return {
 		opts = {},
 	},
 	{
-		"folke/todo-comments.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		opts = {},
-	},
-	{
 		"akinsho/toggleterm.nvim",
 		version = "*",
 		config = true,
@@ -103,9 +88,5 @@ return {
 		-- Pretty diagnostics list
 		"folke/trouble.nvim",
 		opts = {},
-	},
-	{
-		-- Language-specific indent width
-		"tpope/vim-sleuth",
 	},
 }
