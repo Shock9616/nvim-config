@@ -74,6 +74,13 @@ return {
         ft = "rust",
     },
     {
+        "echasnovski/mini.surround",
+        version = false,
+        config = function()
+            require("mini.surround").setup()
+        end,
+    },
+    {
         -- Epic fuzzy finder
         "nvim-telescope/telescope.nvim",
         tag = "0.1.2",

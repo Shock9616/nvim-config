@@ -25,21 +25,21 @@ vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increa
 
 -- Move between buffers using <Shift> hl keys
 if pcall(require, "bufferline.nvim") then
-	vim.keymap.set(
-		"n",
-		"<S-h>",
-		"<cmd>BufferLineCyclePrev<cr>",
-		{ desc = "Previous buffer", noremap = true, silent = true }
-	)
-	vim.keymap.set(
-		"n",
-		"<S-l>",
-		"<cmd>BufferLineCycleNext<cr>",
-		{ desc = "Next buffer", noremap = true, silent = true }
-	)
+    vim.keymap.set(
+        "n",
+        "<S-h>",
+        "<cmd>BufferLineCyclePrev<cr>",
+        { desc = "Previous buffer", noremap = true, silent = true }
+    )
+    vim.keymap.set(
+        "n",
+        "<S-l>",
+        "<cmd>BufferLineCycleNext<cr>",
+        { desc = "Next buffer", noremap = true, silent = true }
+    )
 else
-	vim.keymap.set("n", "<S-h>", "<cmd>bprev<cr>", { desc = "Previous buffer", silent = true })
-	vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer", silent = true })
+    vim.keymap.set("n", "<S-h>", "<cmd>bprev<cr>", { desc = "Previous buffer", silent = true })
+    vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer", silent = true })
 end
 
 -- Clear search with <esc>
