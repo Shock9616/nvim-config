@@ -5,17 +5,24 @@
 --
 
 return {
-	"Shatur/neovim-ayu",
+	"catppuccin/nvim",
+	name = "catppuccin",
+	priority = 1000,
 	config = function()
-		local colours = require("ayu.colors")
-		colours.generate(true)
-
-		require("ayu").setup({
-			mirage = true,
-			overrides = {
-				LineNr = { fg = "#686868" },
+		require("catppuccin").setup({
+			flavour = "macchiato",
+			integrations = {
+				cmp = true,
+				gitsigns = true,
+				indent_blankline = { enabled = false },
+				mason = true,
+				nvimtree = false,
+				treesitter = true,
+				rainbow_delimiters = true,
+				lsp_trouble = true,
+				which_key = true,
 			},
 		})
-		vim.cmd("colorscheme ayu-mirage")
+		vim.cmd("colorscheme catppuccin")
 	end,
 }

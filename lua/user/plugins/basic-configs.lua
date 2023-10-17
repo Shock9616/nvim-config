@@ -61,6 +61,14 @@ return {
         opts = {},
     },
     {
+        -- Colour-matching parens
+        "https://gitlab.com/HiPhish/rainbow-delimiters.nvim.git",
+        event = { "BufReadPre", "BufNewFile" },
+        config = function()
+            vim.g.rainbow_delimiters = {}
+        end,
+    },
+    {
         -- Better Rust support
         "simrat39/rust-tools.nvim",
         ft = "rust",
