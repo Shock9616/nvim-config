@@ -25,21 +25,21 @@ vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increa
 
 -- Move between buffers using <Shift> hl keys
 if pcall(require, "bufferline.nvim") then
-    vim.keymap.set(
-        "n",
-        "<S-h>",
-        "<cmd>BufferLineCyclePrev<cr>",
-        { desc = "Previous buffer", noremap = true, silent = true }
-    )
-    vim.keymap.set(
-        "n",
-        "<S-l>",
-        "<cmd>BufferLineCycleNext<cr>",
-        { desc = "Next buffer", noremap = true, silent = true }
-    )
+	vim.keymap.set(
+		"n",
+		"<S-h>",
+		"<cmd>BufferLineCyclePrev<cr>",
+		{ desc = "Previous buffer", noremap = true, silent = true }
+	)
+	vim.keymap.set(
+		"n",
+		"<S-l>",
+		"<cmd>BufferLineCycleNext<cr>",
+		{ desc = "Next buffer", noremap = true, silent = true }
+	)
 else
-    vim.keymap.set("n", "<S-h>", "<cmd>bprev<cr>", { desc = "Previous buffer", silent = true })
-    vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer", silent = true })
+	vim.keymap.set("n", "<S-h>", "<cmd>bprev<cr>", { desc = "Previous buffer", silent = true })
+	vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer", silent = true })
 end
 
 -- Clear search with <esc>
@@ -89,8 +89,7 @@ vim.keymap.set("n", "<leader>fe", "<cmd>Oil<cr>", { desc = "File Explorer" })
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
 
 -- Buffer
--- vim.keymap.set("n", "<leader>bf", "<cmd>lua require('conform').format()<cr>", { desc = "Format Buffer" })
-vim.keymap.set("n", "<leader>bf", "<cmd>lua vim.lsp.buf.format()<cr>", { desc = "Format Buffer" })
+vim.keymap.set("n", "<leader>bf", "<cmd>lua require('conform').format()<cr>", { desc = "Format Buffer" })
 vim.keymap.set("n", "<leader>bd", "<cmd>bd<cr>", { desc = "Delete Buffer" })
 vim.keymap.set("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 vim.keymap.set("n", "<leader>bp", "<cmd>bprev<cr>", { desc = "Previous buffer" })
