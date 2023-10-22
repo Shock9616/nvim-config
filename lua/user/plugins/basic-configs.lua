@@ -70,7 +70,7 @@ return {
 	},
 	{
 		-- Better Rust support
-		"simrat39/rust-tools.nvim",
+		"mrcjkb/ferris.nvim",
 		ft = "rust",
 	},
 	{
