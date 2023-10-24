@@ -24,12 +24,9 @@ return {
 				lsp_doc_border = false,
 			},
 		})
-		require("notify").setup({
-			render = "compact",
-		})
 	end,
 	dependencies = {
 		"MunifTanjim/nui.nvim",
-		"rcarriga/nvim-notify",
+		-- "rcarriga/nvim-notify",
 	},
 }

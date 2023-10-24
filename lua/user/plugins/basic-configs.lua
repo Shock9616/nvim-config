@@ -50,6 +50,10 @@ return {
 		ft = "markdown",
 	},
 	{
+		"vigoux/notifier.nvim",
+		opts = {},
+	},
+	{
 		-- File management as a buffer
 		"stevearc/oil.nvim",
 		config = function()
