@@ -131,3 +131,4 @@ vim.keymap.set("n", "<leader>xp", "<cmd>vim.diagnostic.get_prev()", { desc = "Pr
 vim.keymap.set("n", "<leader>gaa", "<cmd>Git add .<cr>", { desc = "Add all" })
 vim.keymap.set("n", "<leader>gac", "<cmd>Gwrite<cr>", { desc = "Add current" })
 vim.keymap.set("n", "<leader>gc", "<cmd>Git commit<cr>", { desc = "Commit" })
+vim.keymap.set("n", "<leader>gp", "<cmd>Git push origin main", { desc = "Push origin main" })
