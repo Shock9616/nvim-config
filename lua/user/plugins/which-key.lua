@@ -32,6 +32,10 @@ return {
 				t = "+Terminal",
 				w = "+Window",
 				x = "+Diagnostics",
+				g = {
+					"+Git",
+					a = "+Add",
+				},
 			},
 		})
 	end,

@@ -126,3 +126,8 @@ vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",
 vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { desc = "Quickfixes" })
 vim.keymap.set("n", "<leader>xn", "<cmd>vim.diagnostic.get_next()", { desc = "Next Diagnostic" })
 vim.keymap.set("n", "<leader>xp", "<cmd>vim.diagnostic.get_prev()", { desc = "Previous Diagnostic" })
+
+-- Git
+vim.keymap.set("n", "<leader>gaa", "<cmd>Git add .<cr>", { desc = "Add all" })
+vim.keymap.set("n", "<leader>gac", "<cmd>Gwrite<cr>", { desc = "Add current" })
+vim.keymap.set("n", "<leader>gc", "<cmd>Git commit<cr>", { desc = "Commit" })

@@ -12,6 +12,7 @@ return {
 			javascript = { "clang_format" },
 			html = { "djlint" },
 			css = { "stylelint" },
+			markdown = { "deno_fmt" },
 		},
 		format_on_save = {
 			timeout_ms = 500,

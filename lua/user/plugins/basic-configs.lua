@@ -12,6 +12,9 @@ return {
 		opts = {},
 	},
 	{
+		"tpope/vim-fugitive",
+	},
+	{
 		-- Git gutter
 		"lewis6991/gitsigns.nvim",
 		event = { "BufReadPre", "BufNewFile" },
