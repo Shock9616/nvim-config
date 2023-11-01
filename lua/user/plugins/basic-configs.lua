@@ -77,8 +77,15 @@ return {
 	},
 	{
 		-- Better Rust support
-		"mrcjkb/ferris.nvim",
+		"simrat39/rust-tools.nvim",
 		ft = "rust",
+	},
+	{
+		"dhruvasagar/vim-table-mode",
+		ft = "markdown",
+		config = function()
+			vim.cmd("TableModeToggle")
+		end,
 	},
 	{
 		-- Epic fuzzy finder

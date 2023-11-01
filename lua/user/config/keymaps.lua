@@ -12,10 +12,10 @@ vim.keymap.set({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, si
 vim.keymap.set("n", "U", "<C-r>", { desc = "Redo" })
 
 -- Move to window using the <ctrl> hjkl keys
-vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to left window", remap = true })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to lower window", remap = true })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to upper window", remap = true })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window", remap = true })
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Window left", remap = true })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Window down", remap = true })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Window up", remap = true })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Window right", remap = true })
 
 -- Resize window using <ctrl> arrow keys
 vim.keymap.set("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
@@ -110,6 +110,11 @@ vim.keymap.set("n", "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", { desc 
 vim.keymap.set("n", "<leader>th", "<cmd>ToggleTerm size=15 direction=horizontal<cr>", { desc = "Horizontal" })
 vim.keymap.set("n", "<leader>tv", "<cmd>ToggleTerm size=50 direction=vertical<cr>", { desc = "Vertical" })
 vim.keymap.set({ "n", "t" }, "<leader>tt", "<cmd>ToggleTerm<cr>", { desc = "Toggle" })
+vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])
+vim.keymap.set("t", "<C-h>", "<cmd>wincmd h<cr>", { desc = "Window left", remap = true })
+vim.keymap.set("t", "<C-j>", "<cmd>wincmd j<cr>", { desc = "Window down", remap = true })
+vim.keymap.set("t", "<C-k>", "<cmd>wincmd k<cr>", { desc = "Window up", remap = true })
+vim.keymap.set("t", "<C-l>", "<cmd>wincmd l<cr>", { desc = "Window right", remap = true })
 
 -- LSP
 vim.keymap.set("n", "<leader>li", "<cmd>LspInfo<cr>", { desc = "Buffer Lsp Info" })
