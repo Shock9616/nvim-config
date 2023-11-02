@@ -46,13 +46,14 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
--- wrap and check for spell in text filetypes
+-- Check for spelling and set tab width to 2 in text filetypes
 vim.api.nvim_create_autocmd("FileType", {
 	group = augroup("wrap_spell"),
 	pattern = { "gitcommit", "markdown" },
 	callback = function()
-		vim.opt_local.wrap = true
 		vim.opt_local.spell = true
+		vim.opt.shiftwidth = 2
+		vim.opt.tabstop = 2
 	end,
 })
 
