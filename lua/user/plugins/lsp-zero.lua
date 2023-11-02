@@ -38,6 +38,17 @@ return {
 		require("lspconfig").gdscript.setup({
 			capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
 		})
+		require("lspconfig").matlab_ls.setup({
+			settings = {
+				matlab = {
+					capabilities = require("cmp_nvim_lsp").default_capabilities(),
+					indexWorkspace = true,
+					installPath = "/Applications/MATLAB_R2023b.app",
+					telemetry = false,
+				},
+			},
+			single_file_support = true,
+		})
 
 		lsp.setup()
 
