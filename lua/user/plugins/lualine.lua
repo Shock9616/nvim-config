@@ -43,7 +43,7 @@ return {
 			},
 			sections = {
 				lualine_a = {
-					{ "mode", separator = { left = "█", right = "" } },
+					{ "mode", separator = { left = "█", right = "" }, icon = "" },
 				},
 				lualine_b = {
 					{

@@ -4,7 +4,7 @@ if vim.fn.getcwd() == "/" then
 end
 
 -- Font Settings
-vim.o.guifont = "FiraCode NF:h15"
+vim.o.guifont = "FiraCode Nerd Font:h15"
 
 -- Transparency settings
 local alpha = function()
