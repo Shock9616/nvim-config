@@ -76,11 +76,6 @@ return {
 		end,
 	},
 	{
-		-- Better Rust support
-		"simrat39/rust-tools.nvim",
-		ft = "rust",
-	},
-	{
 		"dhruvasagar/vim-table-mode",
 		ft = "markdown",
 		config = function()
