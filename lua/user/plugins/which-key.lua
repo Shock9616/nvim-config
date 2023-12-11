@@ -36,6 +36,7 @@ return {
 					"+Git",
 					a = "+Add",
 				},
+				d = "+DAP",
 			},
 		})
 	end,

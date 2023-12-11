@@ -13,9 +13,10 @@ return {
 		dap.listeners.before.event_exited["dapui_config"] = function()
 			dapui.close()
 		end
-
-		vim.keymap.set("n", "<F9>", "<cmd>DapStepOver<cr>", { desc = "Debug Step Over" })
-		vim.keymap.set("n", "<F8>", "<cmd>DapStepInto<cr>", { desc = "Debug Step Into" })
+		vim.fn.sign_define(
+			"DapBreakpoint",
+			{ text = "🔴", texthl = "DapBreakpoint", linehl = "DapBreakpoint", numhl = "DapBreakpoint" }
+		)
 
 		require("dapui").setup()
 	end,
