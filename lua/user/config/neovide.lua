@@ -7,14 +7,9 @@ end
 vim.o.guifont = "FiraCode Nerd Font:h15"
 
 -- Transparency settings
-local alpha = function()
-	return string.format("%x", math.floor((255 * vim.g.transparency) or 0.8))
-end
-
-vim.g.neovide_transparency = 0.0
-vim.g.transparency = 1.0
--- vim.g.neovide_background_color = "#1F2430" .. alpha()
-vim.g.neovide_background_color = "#24273a" .. alpha()
+vim.g.neovide_transparency = 0.85
+vim.g.neovide_window_blurred = true
+vim.g.neovide_bgblend = true
 
 -- Scroll Animation Length
 vim.g.neovide_scroll_animation_length = 0.2
