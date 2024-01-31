@@ -22,9 +22,9 @@ vim.g.neovide_refresh_rate_idle = 5
 vim.g.neovide_remember_window_size = true
 
 -- Add missiong Cmd+C/V/X keybindings
-vim.keymap.set("v", "<D-c>", '"+y') -- Copy
-vim.keymap.set("n", "<D-v>", '"+P') -- Paste normal mode
-vim.keymap.set("v", "<D-v>", '"+P') -- Paste visual mode
-vim.keymap.set("c", "<D-v>", "<C-R>+") -- Paste command mode
-vim.keymap.set("i", "<D-v>", '<ESC>"+Pa') -- Paste insert mode
-vim.keymap.set("v", "<D-x>", "dd") -- Cut
+vim.keymap.set("v", "<D-c>", "") -- Copy
+vim.keymap.set("n", "<D-v>", "") -- Paste normal mode
+vim.keymap.set("v", "<D-v>", "") -- Paste visual mode
+vim.keymap.set("c", "<D-v>", "") -- Paste command mode
+vim.keymap.set("i", "<D-v>", "") -- Paste insert mode
+vim.keymap.set("v", "<D-x>", "") -- Cut
