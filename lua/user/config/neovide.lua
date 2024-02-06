@@ -7,8 +7,8 @@ end
 vim.o.guifont = "FiraCode Nerd Font:h15"
 
 -- Transparency settings
-vim.g.neovide_transparency = 0.8
-vim.g.neovide_window_blurred = true
+-- vim.g.neovide_transparency = 0.85
+-- vim.g.neovide_window_blurred = true
 vim.g.neovide_bgblend = true
 
 -- Scroll Animation Length
