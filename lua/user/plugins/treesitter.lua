@@ -26,6 +26,7 @@ return {
 				"html",
 				"css",
 				"java",
+				"regex",
 			},
 		})
 	end,

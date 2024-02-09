@@ -12,20 +12,13 @@ return {
 		opts = {},
 	},
 	{
-		"tpope/vim-fugitive",
-	},
-	{
 		-- Git gutter
 		"lewis6991/gitsigns.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 		opts = {},
 	},
 	{
-		-- Support for gdscript for working in Godot
-		"habamax/vim-godot",
-		ft = "gdscript",
-	},
-	{
+		-- Nice Markdown syntax
 		"lukas-reineke/headlines.nvim",
 		dependencies = "nvim-treesitter/nvim-treesitter",
 		ft = "markdown",
@@ -50,6 +43,7 @@ return {
 		ft = "markdown",
 	},
 	{
+		-- Clean notifications
 		"vigoux/notifier.nvim",
 		opts = {},
 	},
@@ -76,6 +70,7 @@ return {
 		end,
 	},
 	{
+		-- Automatic tables in Markdown
 		"dhruvasagar/vim-table-mode",
 		ft = "markdown",
 		config = function()
