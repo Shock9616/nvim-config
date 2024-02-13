@@ -90,4 +90,35 @@ require("lazy").setup({
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		opts = {},
 	},
+	{
+		"nvim-telescope/telescope.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {},
+	},
+	{
+		"akinsho/toggleterm.nvim",
+		config = true,
+	},
+
+	-- Markdown
+	{
+		"lukas-reineke/headlines.nvim",
+		dependencies = "nvim-treesitter/nvim-treesitter",
+		ft = "markdown",
+		opts = {},
+	},
+	{
+		"iamcco/markdown-preview.nvim",
+		ft = "markdown",
+		config = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	},
+	{
+		"dhruvasagar/vim-table-mode",
+		ft = "markdown",
+		config = function()
+			vim.cmd("TableModeToggle")
+		end,
+	},
 })
