@@ -115,9 +115,9 @@ vim.keymap.set("t", "<C-l>", "<cmd>wincmd l<cr>", { desc = "Window right", remap
 vim.keymap.set("n", "<leader>li", "<cmd>LspInfo<cr>", { desc = "Buffer Lsp Info" })
 vim.keymap.set("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", { desc = "Code Actions" })
 vim.keymap.set("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", { desc = "Rename" })
-vim.keymap.set("n", "<leader>lh", "<cmd>lua vim.lsp.buf.hover()<cr>", { desc = "Hover" })
-vim.keymap.set("n", "<leader>ld", "<cmd>lua vim.lsp.buf.definition()<cr>", { desc = "Goto Definition" })
+vim.keymap.set("n", "<leader>lk", "<cmd>lua vim.lsp.buf.definition()<cr>", { desc = "Goto Definition" })
 vim.keymap.set("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>", { desc = "Format" })
+-- Inlay hint mapping in ~/.config/nvim/lua/user/config/plugins/lsp.lua
 
 -- Debugging
 vim.keymap.set("n", "<leader>dt", "<cmd>lua require('dapui').toggle()<cr>", { desc = "Toggle UI" })

@@ -6,26 +6,44 @@
 
 local lsp = require("lsp-zero").preset({})
 
-lsp.on_attach(function(_, bufnr)
+lsp.on_attach(function(client, bufnr)
 	lsp.default_keymaps({ buffer = bufnr })
+
+	-- Toggle inlay hints
+	vim.g.inlay_hints_visible = false
+	function toggle_inlay_hints()
+		if vim.g.inlay_hints_visible then
+			vim.g.inlay_hints_visible = false
+			vim.lsp.inlay_hint.enable(bufnr, false)
+		else
+			if client.server_capabilities.inlayHintProvider then
+				vim.g.inlay_hints_visible = true
+				vim.lsp.inlay_hint.enable(bufnr, true)
+			else
+				print("No inlay hints available")
+			end
+		end
+	end
+
+	vim.keymap.set("n", "<leader>lh", toggle_inlay_hints, { desc = "Toggle Inlay Hints" })
 end)
 
 lsp.setup()
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
-    ensure_installed = {
-        "lua_ls",
-        "pylsp",
-        "rust_analyzer",
-    },
-    handlers = {
-        lsp.default_setup,
-        lua_ls = function()
-            local lua_opts = lsp.nvim_lua_ls()
-            require("lspconfig").lua_ls.setup(lua_opts)
-        end,
-    }
+	ensure_installed = {
+		"lua_ls",
+		"pylsp",
+		"rust_analyzer",
+	},
+	handlers = {
+		lsp.default_setup,
+		lua_ls = function()
+			local lua_opts = lsp.nvim_lua_ls()
+			require("lspconfig").lua_ls.setup(lua_opts)
+		end,
+	},
 })
 -- Setup SourceKit LSP for Swift
 require("lspconfig").sourcekit.setup({
@@ -34,7 +52,6 @@ require("lspconfig").sourcekit.setup({
 	},
 	filetpes = { "swift" },
 })
-
 
 local has_words_before = function()
 	unpack = unpack or table.unpack
