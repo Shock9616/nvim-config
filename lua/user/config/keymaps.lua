@@ -64,11 +64,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- Helix-like g-prefixed maps
-vim.keymap.set("n", "gh", "0", { desc = "Goto line start" })
-vim.keymap.set("n", "gl", "$", { desc = "Goto line end" })
-vim.keymap.set("n", "gs", "^", { desc = "Goto first non-whitespace character" })
-
 -- ---------- Leader Key Mappins ----------
 
 -- Config
@@ -132,14 +127,6 @@ vim.keymap.set("n", "<F9>", "<cmd>DapStepOver<cr>", { desc = "Step Over" })
 vim.keymap.set("n", "<F8>", "<cmd>DapStepInto<cr>", { desc = "Step Into" })
 vim.keymap.set("n", "<F7>", "<cmd>DapStepOut<cr>", { desc = "Step Out" })
 vim.keymap.set("n", "<leader>dr", "<cmd>lua require('dapui').open({ reset = true })<cr>", { desc = "Reset Windows" })
-
--- Diagnostics
-vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", { desc = "Toggle List" })
-vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", { desc = "Workspace Diagnostics" })
-vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", { desc = "Document Diagnostics" })
-vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { desc = "Quickfixes" })
-vim.keymap.set("n", "<leader>xn", "<cmd>vim.diagnostic.get_next()", { desc = "Next Diagnostic" })
-vim.keymap.set("n", "<leader>xp", "<cmd>vim.diagnostic.get_prev()", { desc = "Previous Diagnostic" })
 
 -- Git
 vim.keymap.set("n", "<leader>gaa", "<cmd>Git add .<cr>", { desc = "Add all" })

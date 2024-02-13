@@ -14,6 +14,7 @@ require("user.config.plugins.statusbar") -- ~/.config/nvim/lua/user/config/plugi
 require("user.config.plugins.lsp") -- ~/.config/nvim/lua/user/config/plugins/lsp.lua
 require("user.config.plugins.treesitter") -- ~/.config/nvim/lua/user/config/plugins/treesitter.lua
 require("user.config.plugins.conform") -- ~/.config/nvim/lua/user/config/plugins/conform.lua
+require("user.config.plugins.whichkey") -- ~/.config/nvim/lua/user/config/plugins/whichkey.lua
 
 if vim.g.neovide then
 	require("user.config.neovide") -- ~/.config/nvim/lua/user/config/neovide.lua
