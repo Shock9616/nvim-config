@@ -86,6 +86,11 @@ require("lazy").setup({
 		opts = {},
 	},
 	{
+		"numToStr/Comment.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+		opts = {},
+	},
+	{
 		"stevearc/oil.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		opts = {},
@@ -98,6 +103,15 @@ require("lazy").setup({
 	{
 		"akinsho/toggleterm.nvim",
 		config = true,
+	},
+	{
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+		init = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+		end,
+		opts = {},
 	},
 
 	-- Markdown
@@ -121,13 +135,11 @@ require("lazy").setup({
 			vim.cmd("TableModeToggle")
 		end,
 	},
+
+	-- Other
 	{
-		"folke/which-key.nvim",
+		"andweeb/presence.nvim",
 		event = "VeryLazy",
-		init = function()
-			vim.o.timeout = true
-			vim.o.timeoutlen = 300
-		end,
 		opts = {},
 	},
 })
