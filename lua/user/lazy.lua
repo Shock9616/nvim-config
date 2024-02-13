@@ -78,4 +78,16 @@ require("lazy").setup({
 		"stevearc/conform.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 	},
+
+	-- Utilities
+	{
+		"altermo/ultimate-autopair.nvim",
+		event = { "InsertEnter", "CmdLineEnter" },
+		opts = {},
+	},
+	{
+		"stevearc/oil.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {},
+	},
 })
