@@ -93,15 +93,18 @@ require("lazy").setup({
 	{
 		"stevearc/oil.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
+		event = "VeryLazy",
 		opts = {},
 	},
 	{
 		"nvim-telescope/telescope.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
+		event = "VeryLazy",
 		opts = {},
 	},
 	{
 		"akinsho/toggleterm.nvim",
+		event = "VeryLazy",
 		config = true,
 	},
 	{
@@ -116,11 +119,13 @@ require("lazy").setup({
 	{
 		"folke/todo-comments.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
+		event = "VeryLazy",
 		opts = {},
 	},
 	{
 		"folke/trouble.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
+		event = "VeryLazy",
 		opts = {},
 	},
 
