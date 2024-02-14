@@ -119,6 +119,15 @@ vim.keymap.set("n", "<leader>lk", "<cmd>lua vim.lsp.buf.definition()<cr>", { des
 vim.keymap.set("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>", { desc = "Format" })
 -- Inlay hint mapping in ~/.config/nvim/lua/user/config/plugins/lsp.lua
 
+-- Diagnostics
+vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", { desc = "Toggle List" })
+vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", { desc = "Workspace Diagnostics" })
+vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", { desc = "Document Diagnostics" })
+vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { desc = "Quickfixes" })
+vim.keymap.set("n", "<leader>xn", "<cmd>vim.diagnostic.get_next()", { desc = "Next Diagnostic" })
+vim.keymap.set("n", "<leader>xp", "<cmd>vim.diagnostic.get_prev()", { desc = "Previous Diagnostic" })
+vim.keymap.set("n", "<leader>xt", "<cmd>TodoTrouble<cr>", { desc = "Show Todo List" })
+
 -- Debugging
 vim.keymap.set("n", "<leader>dt", "<cmd>lua require('dapui').toggle()<cr>", { desc = "Toggle UI" })
 vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>", { desc = "Toggle Breakpoint" })

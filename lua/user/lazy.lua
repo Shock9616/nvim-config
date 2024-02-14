@@ -62,7 +62,7 @@ require("lazy").setup({
 		},
 	},
 	{
-		"vigoux/notifier.nvim",
+		"j-hui/fidget.nvim",
 		opts = {},
 	},
 	{
@@ -111,6 +111,16 @@ require("lazy").setup({
 			vim.o.timeout = true
 			vim.o.timeoutlen = 300
 		end,
+		opts = {},
+	},
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {},
+	},
+	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
 		opts = {},
 	},
 
