@@ -70,19 +70,14 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 })
 
 -- Clear command line messages 3 seconds after leaving command mode
--- TODO: Translate this into lua
-vim.cmd([[
-function! s:empty_message(timer)
-  if mode() ==# 'n'
-    echon ''
-  endif
-endfunction
-
-augroup cmd_msg_cls
-    autocmd!
-    autocmd CmdlineLeave :  call timer_start(3000, funcref('s:empty_message'))
-augroup END
-]])
+vim.api.nvim_create_autocmd({ "CmdlineLeave" }, {
+	group = augroup("cmd_msg_cls"),
+	callback = function()
+		vim.fn.timer_start(3000, function()
+			print(" ")
+		end)
+	end,
+})
 
 -- Not actually an autocmd, but this is MY config, I'll do what I want
 -- Replace 'xdate' with current date in mm/dd/yy format
