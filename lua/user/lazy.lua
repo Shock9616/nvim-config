@@ -19,19 +19,29 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	-- LSP/CMP/Snippets
-	{ "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
-	{ "neovim/nvim-lspconfig" },
-	{ "williamboman/mason.nvim" },
-	{ "williamboman/mason-lspconfig.nvim" },
-	{ "hrsh7th/nvim-cmp" },
-	{ "hrsh7th/cmp-nvim-lsp" },
-	{ "L3MON4D3/LuaSnip" },
-
+	{
+		"VonHeikemen/lsp-zero.nvim",
+		branch = "v3.x",
+		dependencies = {
+			"neovim/nvim-lspconfig",
+			"williamboman/mason.nvim",
+			"williamboman/mason-lspconfig.nvim",
+			"hrsh7th/nvim-cmp",
+			"hrsh7th/cmp-nvim-lsp",
+			"L3MON4D3/LuaSnip",
+		},
+		config = function()
+			require("user.config.plugins.lsp") -- ~/.config/nvim/lua/user/config/plugins/lsp.lua
+		end,
+	},
 	-- Treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			require("user.config.plugins.treesitter") -- ~/.config/nvim/lua/user/config/plugins/treesitter.lua
+		end,
 	},
 
 	-- Visual/UI Plugins
@@ -39,10 +49,16 @@ require("lazy").setup({
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
+		config = function()
+			require("user.config.plugins.catppuccin") -- ~/.config/nvim/lua/user/config/plugins/catppuccin.lua
+		end,
 	},
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("user.config.plugins.lualine") -- ~/.config/nvim/lua/user/config/plugins/lualine.lua
+		end,
 	},
 	{
 		"lewis6991/gitsigns.nvim",
@@ -77,6 +93,9 @@ require("lazy").setup({
 	{
 		"stevearc/conform.nvim",
 		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			require("user.config.plugins.conform") -- ~/.config/nvim/lua/user/config/plugins/conform.lua
+		end,
 	},
 
 	-- Utilities
@@ -114,7 +133,9 @@ require("lazy").setup({
 			vim.o.timeout = true
 			vim.o.timeoutlen = 300
 		end,
-		opts = {},
+		config = function()
+			require("user.config.plugins.whichkey") -- ~/.config/nvim/lua/user/config/plugins/whichkey.lua
+		end,
 	},
 	{
 		"folke/todo-comments.nvim",
