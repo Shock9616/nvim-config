@@ -88,6 +88,12 @@ require("lazy").setup({
 			vim.g.rainbow_delimiters = {}
 		end,
 	},
+	{
+		"goolord/alpha-nvim",
+		config = function()
+			require("user.config.plugins.alpha") -- ~/.config/nvim/lua/user/config/plugins/alpha.lua
+		end,
+	},
 
 	-- Conform
 	{
