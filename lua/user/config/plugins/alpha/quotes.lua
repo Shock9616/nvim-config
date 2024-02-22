@@ -14,5 +14,6 @@ return {
 		"We both said a lot of things that you're going to regret",
 		"Hello! this is the part where I kill you",
 		"Spaaaaaaaaaaaaaace!",
+		"We do what we must because we can",
 	},
 }
