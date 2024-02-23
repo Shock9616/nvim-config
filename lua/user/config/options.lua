@@ -17,6 +17,7 @@ vim.opt.signcolumn = "yes" -- Always show the signcolumn
 vim.opt.wrap = false -- Disable line wrap
 vim.opt.cursorline = true
 vim.opt.colorcolumn = { "81" }
+vim.opt.cmdheight = 0 -- Put statusline at the very bottom
 
 -- General options
 vim.opt.autowrite = true
