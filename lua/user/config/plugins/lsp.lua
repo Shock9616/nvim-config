@@ -63,31 +63,31 @@ local cmp = require("cmp")
 local luasnip = require("luasnip")
 
 local kind_icons = {
-	Text = "",
+	Text = "",
 	Method = "m",
-	Function = "",
+	Function = "󰡱",
 	Constructor = "",
 	Field = "",
-	Variable = "",
-	Class = "",
+	Variable = "󰫧",
+	Class = "",
 	Interface = "",
 	Module = "",
 	Property = "",
 	Unit = "",
-	Value = "",
+	Value = "",
 	Enum = "",
-	Keyword = "",
+	Keyword = "",
 	Snippet = "",
-	Color = "",
-	File = "",
+	Color = "",
+	File = "",
 	Reference = "",
-	Folder = "",
+	Folder = "",
 	EnumMember = "",
-	Constant = "",
+	Constant = "",
 	Struct = "",
 	Event = "",
-	Operator = "",
-	TypeParameter = "",
+	Operator = "",
+	TypeParameter = "",
 }
 
 cmp.setup({
@@ -140,6 +140,7 @@ cmp.setup({
 				buffer = "[Buffer]",
 				path = "[Path]",
 			})[entry.source.name]
+			vim_item.abbr = string.sub(vim_item.abbr, 1, 30)
 			return vim_item
 		end,
 	},
