@@ -102,8 +102,16 @@ require("lazy").setup({
 			require("user.config.plugins.noice") -- ~/.config/nvim/lua/user/config/plugins/noice.lua
 		end,
 	},
+	{
+		"rcarriga/nvim-dap-ui",
+		event = "VeryLazy",
+		dependencies = { "mfussenegger/nvim-dap" },
+		config = function()
+			require("user.config.plugins.dap") -- ~/.config/nvim/lua/user/config/plugins/dap.lua
+		end,
+	},
 
-	-- Conform
+	-- Utilities
 	{
 		"stevearc/conform.nvim",
 		event = { "BufReadPre", "BufNewFile" },
@@ -111,8 +119,6 @@ require("lazy").setup({
 			require("user.config.plugins.conform") -- ~/.config/nvim/lua/user/config/plugins/conform.lua
 		end,
 	},
-
-	-- Utilities
 	{
 		"altermo/ultimate-autopair.nvim",
 		event = { "InsertEnter", "CmdLineEnter" },
