@@ -91,7 +91,15 @@ require("lazy").setup({
 	{
 		"goolord/alpha-nvim",
 		config = function()
-			require("user.config.plugins.alpha") -- ~/.config/nvim/lua/user/config/plugins/alpha.lua
+			require("user.config.plugins.alpha") -- ~/.config/nvim/lua/user/config/plugins/alpha/init.lua
+		end,
+	},
+	{
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		dependencies = { "MunifTanjim/nui.nvim" },
+		config = function()
+			require("user.config.plugins.noice") -- ~/.config/nvim/lua/user/config/plugins/noice.lua
 		end,
 	},
 

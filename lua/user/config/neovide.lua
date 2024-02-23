@@ -21,6 +21,9 @@ vim.g.neovide_refresh_rate_idle = 5
 -- Remember previous window size
 vim.g.neovide_remember_window_size = true
 
+-- Disable floating window drop shadow
+vim.g.neovide_floating_shadow = false
+
 -- Add missiong Cmd+C/V/X keybindings
 vim.keymap.set("v", "<D-c>", "") -- Copy
 vim.keymap.set("n", "<D-v>", "") -- Paste normal mode
