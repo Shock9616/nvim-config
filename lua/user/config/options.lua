@@ -16,7 +16,7 @@ vim.opt.showmode = false -- Don't show because we have a statusline
 vim.opt.signcolumn = "yes" -- Always show the signcolumn
 vim.opt.wrap = false -- Disable line wrap
 vim.opt.cursorline = true
-vim.opt.colorcolumn = { "81" }
+vim.opt.colorcolumn = { 81 }
 vim.opt.cmdheight = 0 -- Put statusline at the very bottom
 
 -- General options

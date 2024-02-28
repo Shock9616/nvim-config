@@ -16,5 +16,8 @@ require("catppuccin").setup({
 		lsp_trouble = true,
 		which_key = true,
 	},
+	custom_highlights = {
+		ColorColumn = { bg = "#303446" },
+	},
 })
 vim.cmd("colorscheme catppuccin")
