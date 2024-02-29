@@ -34,6 +34,19 @@ require("lazy").setup({
 			require("user.config.plugins.lsp") -- ~/.config/nvim/lua/user/config/plugins/lsp.lua
 		end,
 	},
+	{
+		"mrcjkb/rustaceanvim",
+		ft = { "rust" },
+		config = function()
+			vim.g.rustaceanvim = {
+				tools = {
+					float_win_config = {
+						auto_focus = true,
+					},
+				},
+			}
+		end,
+	},
 	-- Treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -76,10 +89,6 @@ require("lazy").setup({
 				priority = 500,
 			},
 		},
-	},
-	{
-		"j-hui/fidget.nvim",
-		opts = {},
 	},
 	{
 		"https://gitlab.com/HiPhish/rainbow-delimiters.nvim.git",
@@ -195,12 +204,5 @@ require("lazy").setup({
 		config = function()
 			vim.cmd("TableModeToggle")
 		end,
-	},
-
-	-- Other
-	{
-		"andweeb/presence.nvim",
-		event = "VeryLazy",
-		opts = {},
 	},
 })
