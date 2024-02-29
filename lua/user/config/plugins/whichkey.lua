@@ -22,11 +22,6 @@ wk.register({
 		l = "+LSP",
 		t = "+Terminal",
 		w = "+Window",
-		x = "+Diagnostics",
-		g = {
-			"+Git",
-			a = "+Add",
-		},
 		d = "+DAP",
 	},
 })

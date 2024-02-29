@@ -91,13 +91,6 @@ require("lazy").setup({
 		},
 	},
 	{
-		"https://gitlab.com/HiPhish/rainbow-delimiters.nvim.git",
-		event = { "BufReadPre", "BufNewFile" },
-		config = function()
-			vim.g.rainbow_delimiters = {}
-		end,
-	},
-	{
 		"goolord/alpha-nvim",
 		config = function()
 			require("user.config.plugins.alpha") -- ~/.config/nvim/lua/user/config/plugins/alpha/init.lua
@@ -174,12 +167,6 @@ require("lazy").setup({
 	{
 		"folke/todo-comments.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
-		event = "VeryLazy",
-		opts = {},
-	},
-	{
-		"folke/trouble.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
 		event = "VeryLazy",
 		opts = {},
 	},

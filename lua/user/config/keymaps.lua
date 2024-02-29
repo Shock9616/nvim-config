@@ -82,6 +82,7 @@ vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Live
 vim.keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Recent Files" })
 vim.keymap.set("n", "<leader>fe", "<cmd>Oil<cr>", { desc = "File Explorer" })
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
+vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Todo comments" })
 
 -- Buffer
 vim.keymap.set("n", "<leader>bf", "<cmd>lua require('conform').format()<cr>", { desc = "Format Buffer" })
@@ -119,15 +120,6 @@ vim.keymap.set("n", "<leader>lk", "<cmd>lua vim.lsp.buf.definition()<cr>", { des
 vim.keymap.set("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>", { desc = "Format" })
 -- Inlay hint mapping in ~/.config/nvim/lua/user/config/plugins/lsp.lua
 
--- Diagnostics
-vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", { desc = "Toggle List" })
-vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", { desc = "Workspace Diagnostics" })
-vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", { desc = "Document Diagnostics" })
-vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { desc = "Quickfixes" })
-vim.keymap.set("n", "<leader>xn", "<cmd>vim.diagnostic.get_next()", { desc = "Next Diagnostic" })
-vim.keymap.set("n", "<leader>xp", "<cmd>vim.diagnostic.get_prev()", { desc = "Previous Diagnostic" })
-vim.keymap.set("n", "<leader>xt", "<cmd>TodoTrouble<cr>", { desc = "Show Todo List" })
-
 -- Debugging
 vim.keymap.set("n", "<leader>dt", "<cmd>lua require('dapui').toggle()<cr>", { desc = "Toggle UI" })
 vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>", { desc = "Toggle Breakpoint" })
@@ -136,9 +128,3 @@ vim.keymap.set("n", "<F9>", "<cmd>DapStepOver<cr>", { desc = "Step Over" })
 vim.keymap.set("n", "<F8>", "<cmd>DapStepInto<cr>", { desc = "Step Into" })
 vim.keymap.set("n", "<F7>", "<cmd>DapStepOut<cr>", { desc = "Step Out" })
 vim.keymap.set("n", "<leader>dr", "<cmd>lua require('dapui').open({ reset = true })<cr>", { desc = "Reset Windows" })
-
--- Git
-vim.keymap.set("n", "<leader>gaa", "<cmd>Git add .<cr>", { desc = "Add all" })
-vim.keymap.set("n", "<leader>gac", "<cmd>Gwrite<cr>", { desc = "Add current" })
-vim.keymap.set("n", "<leader>gc", "<cmd>Git commit<cr>", { desc = "Commit" })
-vim.keymap.set("n", "<leader>gp", "<cmd>Git push origin main<cr>", { desc = "Push origin main" })
