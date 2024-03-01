@@ -47,6 +47,7 @@ require("lazy").setup({
 			}
 		end,
 	},
+
 	-- Treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -104,14 +105,6 @@ require("lazy").setup({
 			require("user.config.plugins.noice") -- ~/.config/nvim/lua/user/config/plugins/noice.lua
 		end,
 	},
-	{
-		"rcarriga/nvim-dap-ui",
-		event = "VeryLazy",
-		dependencies = { "mfussenegger/nvim-dap" },
-		config = function()
-			require("user.config.plugins.dap") -- ~/.config/nvim/lua/user/config/plugins/dap.lua
-		end,
-	},
 
 	-- Utilities
 	{
@@ -146,7 +139,11 @@ require("lazy").setup({
 		"nvim-telescope/telescope.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		event = "VeryLazy",
-		opts = {},
+		opts = {
+			defaults = {
+				file_ignore_patterns = { "lazy%-lock.json" },
+			},
+		},
 	},
 	{
 		"akinsho/toggleterm.nvim",

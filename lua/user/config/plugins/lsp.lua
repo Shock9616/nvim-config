@@ -35,7 +35,6 @@ require("mason-lspconfig").setup({
 	ensure_installed = {
 		"lua_ls",
 		"pylsp",
-		"rust_analyzer",
 	},
 	handlers = {
 		lsp.default_setup,
