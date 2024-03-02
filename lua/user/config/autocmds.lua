@@ -69,6 +69,14 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	end,
 })
 
+-- Auto-format buffer on save
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+	group = augroup("LspFormat"),
+	callback = function()
+		vim.lsp.buf.format()
+	end,
+})
+
 -- Not actually an autocmd, but this is MY config, I'll do what I want
 -- Replace 'xdate' with current date in mm/dd/yy format
 vim.cmd("iab xdate <c-r>=strftime('%m-%d-%Y')<cr>")
