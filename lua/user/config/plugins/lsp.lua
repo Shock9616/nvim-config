@@ -26,6 +26,23 @@ lsp.on_attach(function(client, bufnr)
     end
 
     vim.keymap.set("n", "<leader>lh", toggle_inlay_hints, { desc = "Toggle Inlay Hints" })
+
+    -- Autoformat on save
+    local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
+    if client.supports_method("textDocument/formatting") then
+        vim.api.nvim_clear_autocmds({
+            group = augroup,
+            buffer = bufnr,
+        })
+        vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+            group = augroup,
+            buffer = bufnr,
+            callback = function()
+                vim.lsp.buf.format({ bufnr = bufnr })
+            end
+        })
+    end
 end)
 
 lsp.setup()
