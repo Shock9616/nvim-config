@@ -83,6 +83,11 @@ vim.keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Recen
 vim.keymap.set("n", "<leader>fe", "<cmd>Oil<cr>", { desc = "File Explorer" })
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
 vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Todo comments" })
+vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "Help tags" })
+vim.keymap.set("n", "<leader>fc", function()
+    local builtin = require("telescope.builtin")
+    builtin.find_files { cwd = vim.fn.stdpath("config") }
+end, { desc = "Neovim config" })
 
 -- Buffer
 vim.keymap.set("n", "<leader>bf", "<cmd>lua vim.lsp.buf.format()<cr>", { desc = "Format Buffer" })
@@ -114,11 +119,24 @@ vim.keymap.set("t", "<C-l>", "<cmd>wincmd l<cr>", { desc = "Window right", remap
 
 -- LSP
 vim.keymap.set("n", "<leader>li", "<cmd>LspInfo<cr>", { desc = "Buffer Lsp Info" })
-vim.keymap.set("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", { desc = "Code Actions" })
-vim.keymap.set("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", { desc = "Rename" })
-vim.keymap.set("n", "<leader>lk", "<cmd>lua vim.lsp.buf.definition()<cr>", { desc = "Goto Definition" })
-vim.keymap.set("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>", { desc = "Format" })
--- Inlay hint mapping in ~/.config/nvim/lua/user/config/plugins/lsp.lua
+
+-- The below mappings are only loaded when a language server is attached
+vim.api.nvim_create_autocmd("LspAttach", {
+    group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
+    callback = function(event)
+        vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<cr>", { desc = "Goto Definition" })
+        vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", { desc = "Goto References" })
+        vim.keymap.set("n", "gI", "<cmd>Telescope lsp_implementations<cr>", { desc = "Goto Implementation" })
+        vim.keymap.set("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", { desc = "Code Actions" })
+        vim.keymap.set("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()", { desc = "Rename" })
+        vim.keymap.set("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>", { desc = "Format" })
+        vim.keymap.set("n", "<leader>lds", "<cmd>Telescope lsp_document_symbols<cr>",
+            { desc = "Search document symbols" })
+        vim.keymap.set("n", "<leader>lws", "<cmd>Telescope lsp_workspace_symbols<cr>",
+            { desc = "Search document symbols" })
+        -- Inlay hint mapping in ~/.config/nvim/lua/user/config/plugins/lsp.lua
+    end
+})
 
 -- Debugging
 vim.keymap.set("n", "<leader>dt", "<cmd>lua require('dapui').toggle()<cr>", { desc = "Toggle UI" })
@@ -128,3 +146,8 @@ vim.keymap.set("n", "<F9>", "<cmd>DapStepOver<cr>", { desc = "Step Over" })
 vim.keymap.set("n", "<F8>", "<cmd>DapStepInto<cr>", { desc = "Step Into" })
 vim.keymap.set("n", "<F7>", "<cmd>DapStepOut<cr>", { desc = "Step Out" })
 vim.keymap.set("n", "<leader>dr", "<cmd>lua require('dapui').open({ reset = true })<cr>", { desc = "Reset Windows" })
+
+-- Diagnostics
+vim.keymap.set("n", "<leader>xn", vim.diagnostic.goto_next, { desc = "Goto next diagnostic" })
+vim.keymap.set("n", "<leader>xp", vim.diagnostic.goto_prev, { desc = "Goto previous diagnostic" })
+vim.keymap.set("n", "<leader>xk", vim.diagnostic.open_float, { desc = "Show current diagnostic" })
