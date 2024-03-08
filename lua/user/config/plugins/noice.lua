@@ -10,7 +10,7 @@ require("noice").setup({
         override = {
             ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
             ["vim.lsp.util.stylize_markdown"] = true,
-            ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
+            ["cmp.entry.get_documentation"] = true,
         },
     },
     cmdline = {
@@ -25,20 +25,22 @@ require("noice").setup({
         },
     },
     presets = {
-        long_message_to_split = true, -- long messages will be sent to a split
-        lsp_doc_border = true,  -- add a border to hover docs and signature help
+        long_message_to_split = true,
+        lsp_doc_border = true,
     },
-})
-
-require("notify").setup({
-    render = "compact",
-    top_down = false,
-    timeout = 3000,
-    background_colour = "#24273a",
-    max_height = function()
-        return math.floor(vim.o.lines * 0.25)
-    end,
-    max_width = function()
-        return math.floor(vim.o.columns * 0.5)
-    end,
+    lsp = {
+        progress = {
+            enabled = true,
+        },
+    },
+    messages = {
+        enabled = true,
+    },
+    views = {
+        mini = {
+            win_options = {
+                winblend = 0,
+            },
+        },
+    },
 })

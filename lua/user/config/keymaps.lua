@@ -86,7 +86,7 @@ vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Todo comme
 vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "Help tags" })
 vim.keymap.set("n", "<leader>fc", function()
     local builtin = require("telescope.builtin")
-    builtin.find_files { cwd = vim.fn.stdpath("config") }
+    builtin.find_files({ cwd = vim.fn.stdpath("config") })
 end, { desc = "Neovim config" })
 
 -- Buffer
@@ -106,17 +106,6 @@ vim.keymap.set("n", "<leader>w<Left>", "<cmd>vertical resize -10<cr>", { desc = 
 vim.keymap.set("n", "<leader>w<Right>", "<cmd>vertical resize +10<cr>", { desc = "Increase Window Width" })
 vim.keymap.set("n", "<leader>wq", "<cmd>:wq<cr>", { desc = "Save & Close Window" })
 
--- Terminal
-vim.keymap.set("n", "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", { desc = "Float" })
-vim.keymap.set("n", "<leader>th", "<cmd>ToggleTerm size=15 direction=horizontal<cr>", { desc = "Horizontal" })
-vim.keymap.set("n", "<leader>tv", "<cmd>ToggleTerm size=50 direction=vertical<cr>", { desc = "Vertical" })
-vim.keymap.set({ "n", "t" }, "<leader>tt", "<cmd>ToggleTerm<cr>", { desc = "Toggle" })
-vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])
-vim.keymap.set("t", "<C-h>", "<cmd>wincmd h<cr>", { desc = "Window left", remap = true })
-vim.keymap.set("t", "<C-j>", "<cmd>wincmd j<cr>", { desc = "Window down", remap = true })
-vim.keymap.set("t", "<C-k>", "<cmd>wincmd k<cr>", { desc = "Window up", remap = true })
-vim.keymap.set("t", "<C-l>", "<cmd>wincmd l<cr>", { desc = "Window right", remap = true })
-
 -- LSP
 vim.keymap.set("n", "<leader>li", "<cmd>LspInfo<cr>", { desc = "Buffer Lsp Info" })
 
@@ -130,22 +119,21 @@ vim.api.nvim_create_autocmd("LspAttach", {
         vim.keymap.set("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", { desc = "Code Actions" })
         vim.keymap.set("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()", { desc = "Rename" })
         vim.keymap.set("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>", { desc = "Format" })
-        vim.keymap.set("n", "<leader>lds", "<cmd>Telescope lsp_document_symbols<cr>",
-            { desc = "Search document symbols" })
-        vim.keymap.set("n", "<leader>lws", "<cmd>Telescope lsp_workspace_symbols<cr>",
-            { desc = "Search document symbols" })
+        vim.keymap.set(
+            "n",
+            "<leader>lds",
+            "<cmd>Telescope lsp_document_symbols<cr>",
+            { desc = "Search document symbols" }
+        )
+        vim.keymap.set(
+            "n",
+            "<leader>lws",
+            "<cmd>Telescope lsp_workspace_symbols<cr>",
+            { desc = "Search document symbols" }
+        )
         -- Inlay hint mapping in ~/.config/nvim/lua/user/config/plugins/lsp.lua
-    end
+    end,
 })
-
--- Debugging
-vim.keymap.set("n", "<leader>dt", "<cmd>lua require('dapui').toggle()<cr>", { desc = "Toggle UI" })
-vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>", { desc = "Toggle Breakpoint" })
-vim.keymap.set("n", "<leader>dx", "<cmd>DapTerminate<cr>", { desc = "Terminate Debugger" })
-vim.keymap.set("n", "<F9>", "<cmd>DapStepOver<cr>", { desc = "Step Over" })
-vim.keymap.set("n", "<F8>", "<cmd>DapStepInto<cr>", { desc = "Step Into" })
-vim.keymap.set("n", "<F7>", "<cmd>DapStepOut<cr>", { desc = "Step Out" })
-vim.keymap.set("n", "<leader>dr", "<cmd>lua require('dapui').open({ reset = true })<cr>", { desc = "Reset Windows" })
 
 -- Diagnostics
 vim.keymap.set("n", "<leader>xn", vim.diagnostic.goto_next, { desc = "Goto next diagnostic" })
