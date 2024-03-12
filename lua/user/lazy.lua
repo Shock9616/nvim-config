@@ -95,12 +95,6 @@ require("lazy").setup({
         },
     },
     {
-        "goolord/alpha-nvim",
-        config = function()
-            require("user.config.plugins.alpha") -- ~/.config/nvim/lua/user/config/plugins/alpha/init.lua
-        end,
-    },
-    {
         "folke/noice.nvim",
         event = "VeryLazy",
         dependencies = {
