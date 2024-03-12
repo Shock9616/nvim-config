@@ -38,7 +38,7 @@ vim.opt.wildmode = "longest:full,full" -- Command-line completion mode
 vim.opt.inccommand = "nosplit"         -- Preview incremental substitute
 vim.opt.pumblend = 10                  -- Popup blend
 vim.opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize" }
-vim.opt.shortmess:append({ W = true, c = true })
+vim.opt.shortmess:append({ W = true, c = true, I = true })
 
 vim.opt.expandtab = true  -- Use spaces instead of tabs
 vim.opt.shiftround = true -- Round indent to multiple of shiftwidth

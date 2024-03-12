@@ -30,6 +30,7 @@ require("lazy").setup({
             "hrsh7th/cmp-nvim-lsp",
             "L3MON4D3/LuaSnip",
         },
+        event = "VeryLazy",
         config = function()
             require("user.config.plugins.lsp") -- ~/.config/nvim/lua/user/config/plugins/lsp.lua
         end,
@@ -73,6 +74,7 @@ require("lazy").setup({
         dependencies = {
             "nvim-tree/nvim-web-devicons",
         },
+        event = "VeryLazy",
         config = function()
             require("user.config.plugins.lualine") -- ~/.config/nvim/lua/user/config/plugins/lualine.lua
         end,
@@ -200,5 +202,10 @@ require("lazy").setup({
         config = function()
             vim.cmd("TableModeToggle")
         end,
+    },
+}, {
+    -- Configure Lazy itself
+    ui = {
+        border = "rounded",
     },
 })

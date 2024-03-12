@@ -47,7 +47,11 @@ end)
 
 lsp.setup()
 
-require("mason").setup({})
+require("mason").setup({
+    ui = {
+        border = "rounded",
+    },
+})
 require("mason-lspconfig").setup({
     ensure_installed = {
         "lua_ls",
