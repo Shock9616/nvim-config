@@ -36,7 +36,7 @@ vim.opt.clipboard = "unnamedplus"      -- Sync w/ system clipboard
 vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.wildmode = "longest:full,full" -- Command-line completion mode
 vim.opt.inccommand = "nosplit"         -- Preview incremental substitute
-vim.opt.pumblend = 10                  -- Popup blend
+vim.opt.pumblend = 0                   -- Popup blend
 vim.opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize" }
 vim.opt.shortmess:append({ W = true, c = true, I = true })
 
