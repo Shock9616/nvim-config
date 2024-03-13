@@ -44,3 +44,6 @@ require("noice").setup({
         },
     },
 })
+
+-- Allow searaching noice notifications w/ telescope
+require("telescope").load_extension("noice")
