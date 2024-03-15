@@ -24,23 +24,8 @@ vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decreas
 vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
 
 -- Move between buffers using <Shift> hl keys
-if pcall(require, "bufferline.nvim") then
-    vim.keymap.set(
-        "n",
-        "<S-h>",
-        "<cmd>BufferLineCyclePrev<cr>",
-        { desc = "Previous buffer", noremap = true, silent = true }
-    )
-    vim.keymap.set(
-        "n",
-        "<S-l>",
-        "<cmd>BufferLineCycleNext<cr>",
-        { desc = "Next buffer", noremap = true, silent = true }
-    )
-else
-    vim.keymap.set("n", "<S-h>", "<cmd>bprev<cr>", { desc = "Previous buffer", silent = true })
-    vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer", silent = true })
-end
+vim.keymap.set("n", "<S-h>", "<cmd>bprev<cr>", { desc = "Previous buffer", silent = true })
+vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer", silent = true })
 
 -- Clear search with <esc>
 vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch", silent = true })
@@ -139,3 +124,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
 vim.keymap.set("n", "<leader>xn", vim.diagnostic.goto_next, { desc = "Goto next diagnostic" })
 vim.keymap.set("n", "<leader>xp", vim.diagnostic.goto_prev, { desc = "Goto previous diagnostic" })
 vim.keymap.set("n", "<leader>xk", vim.diagnostic.open_float, { desc = "Show current diagnostic" })
+
+-- Obsidian
+local obsidian_loaded, obsidian = pcall(require, "obsidian")
+
+if obsidian_loaded then
+    vim.keymap.set("n", "gf", function()
+        if obsidian.util.cursor_on_markdown_link() then
+            return "<cmd>ObsidianFollowLink<cr>"
+        else
+            return "gf"
+        end
+    end, { noremap = false, expr = true })
+end
