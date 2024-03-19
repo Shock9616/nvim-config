@@ -188,22 +188,6 @@ require("lazy").setup({
 
     -- Markdown
     {
-        "epwalsh/obsidian.nvim",
-        version = "*",
-        lazy = true,
-        ft = "markdown",
-        event = {
-            "BufReadPre " .. vim.fn.expand("~") .. "Library/Mobile Documents/iCloud~md~obsidian/Documents/Notes/**.md",
-            "BufNewFile " .. vim.fn.expand("~") .. "Library/Mobile Documents/iCloud~md~obsidian/Documents/Notes/**.md",
-        },
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-        },
-        config = function()
-            require("user.config.plugins.obsidian") -- ~/.config/nvim/lua/user/config/plugins/obsidian.lua
-        end,
-    },
-    {
         "lukas-reineke/headlines.nvim",
         dependencies = "nvim-treesitter/nvim-treesitter",
         ft = "markdown",
