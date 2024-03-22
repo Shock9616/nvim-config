@@ -125,15 +125,5 @@ vim.keymap.set("n", "<leader>xn", vim.diagnostic.goto_next, { desc = "Goto next 
 vim.keymap.set("n", "<leader>xp", vim.diagnostic.goto_prev, { desc = "Goto previous diagnostic" })
 vim.keymap.set("n", "<leader>xk", vim.diagnostic.open_float, { desc = "Show current diagnostic" })
 
--- Obsidian
-local obsidian_loaded, obsidian = pcall(require, "obsidian")
-
-if obsidian_loaded then
-    vim.keymap.set("n", "gf", function()
-        if obsidian.util.cursor_on_markdown_link() then
-            return "<cmd>ObsidianFollowLink<cr>"
-        else
-            return "gf"
-        end
-    end, { noremap = false, expr = true })
-end
+-- Git
+vim.keymap.set("n", "<leader>gt", "<cmd>Fugit2<cr>", { desc = "Toggle Fugit2 UI" })

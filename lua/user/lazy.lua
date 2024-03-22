@@ -31,7 +31,6 @@ require("lazy").setup({
             "hrsh7th/cmp-cmdline",
             "L3MON4D3/LuaSnip",
         },
-        event = "VeryLazy",
         config = function()
             require("user.config.plugins.lsp") -- ~/.config/nvim/lua/user/config/plugins/lsp.lua
         end,
@@ -205,6 +204,15 @@ require("lazy").setup({
         ft = "markdown",
         config = function()
             vim.cmd("TableModeToggle")
+        end,
+    },
+
+    -- Other
+    {
+        "mrquantumcodes/configpulse",
+        event = "VeryLazy",
+        config = function()
+            vim.cmd([[command! ConfigPulse lua require("configpulse").find_time()]])
         end,
     },
 }, {
