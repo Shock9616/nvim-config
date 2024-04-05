@@ -22,5 +22,6 @@ wk.register({
         l = "+LSP",
         w = "+Window",
         x = "+Diagnostics",
+        d = "+Debug",
     },
 })

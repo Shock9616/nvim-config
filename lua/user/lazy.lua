@@ -49,6 +49,19 @@ require("lazy").setup({
         end,
     },
 
+    -- DAP
+    {
+        "rcarriga/nvim-dap-ui",
+        dependencies = {
+            "mfussenegger/nvim-dap",
+            "nvim-neotest/nvim-nio",
+        },
+        event = "VeryLazy",
+        config = function()
+            require("user.config.plugins.dap") -- ~/.config/nvim/lua/user/config/plugins/dap.lua
+        end,
+    },
+
     -- Treesitter
     {
         "nvim-treesitter/nvim-treesitter",
@@ -199,6 +212,21 @@ require("lazy").setup({
         ft = "markdown",
         config = function()
             vim.cmd("TableModeToggle")
+        end,
+    },
+
+    -- Mac/iOS Development
+    {
+        "wojciech-kulik/xcodebuild.nvim",
+        dependencies = {
+            "nvim-telescope/telescope.nvim",
+            "MunifTanjim/nui.nvim",
+            "stevearc/oil.nvim",
+            "nvim-treesitter/nvim-treesitter",
+        },
+        ft = "swift",
+        config = function()
+            require("user.config.plugins.xcodebuild") -- ~/.config/nvim/lua/user/config/plugins/xcodebuild.lua
         end,
     },
 

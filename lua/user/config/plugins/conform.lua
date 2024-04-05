@@ -8,6 +8,7 @@ require("conform").setup({
     formatters_by_ft = {
         lua = { "stylua" },
         python = { "ruff_format", "ruff_fix" },
+        swift = { "swiftformat" },
         rust = { "rustfmt" },
         c = { "clang_format" },
         cpp = { "clang_format" },

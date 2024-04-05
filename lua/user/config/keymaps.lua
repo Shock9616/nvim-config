@@ -120,6 +120,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end,
 })
 
+-- DAP
+vim.keymap.set("n", "<leader>dt", "<cmd>lua require('dapui').toggle()<cr>", { desc = "Toggle UI" })
+vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>", { desc = "Toggle Breakpoint" })
+vim.keymap.set("n", "<leader>dx", "<cmd>DapTerminate<cr>", { desc = "Terminate Debugger" })
+vim.keymap.set("n", "<F9>", "<cmd>DapStepOver<cr>", { desc = "Step Over" })
+vim.keymap.set("n", "<F8>", "<cmd>DapStepInto<cr>", { desc = "Step Into" })
+vim.keymap.set("n", "<F7>", "<cmd>DapStepOut<cr>", { desc = "Step Out" })
+vim.keymap.set("n", "<leader>dr", "<cmd>lua require('dapui').open({ reset = true })<cr>", { desc = "Reset Windows" })
+
 -- Diagnostics
 vim.keymap.set("n", "<leader>xn", vim.diagnostic.goto_next, { desc = "Goto next diagnostic" })
 vim.keymap.set("n", "<leader>xp", vim.diagnostic.goto_prev, { desc = "Goto previous diagnostic" })
@@ -127,3 +136,17 @@ vim.keymap.set("n", "<leader>xk", vim.diagnostic.open_float, { desc = "Show curr
 
 -- Git
 vim.keymap.set("n", "<leader>gt", "<cmd>Fugit2<cr>", { desc = "Toggle Fugit2 UI" })
+
+-- Xcodebuild
+
+vim.keymap.set("n", "<leader>il", "<cmd>XcodebuildToggleLogs<cr>", { desc = "Toggle Xcodebuild Logs" })
+vim.keymap.set("n", "<leader>ib", "<cmd>XcodebuildBuild<cr>", { desc = "Build Project" })
+vim.keymap.set("n", "<leader>ir", "<cmd>XcodebuildBuildRun<cr>", { desc = "Build & Run Project" })
+vim.keymap.set("n", "<leader>it", "<cmd>XcodebuildTest<cr>", { desc = "Run Tests" })
+vim.keymap.set("n", "<leader>iT", "<cmd>XcodebuildTestClass<cr>", { desc = "Run This Test Class" })
+vim.keymap.set("n", "<leader>i", "<cmd>XcodebuildPicker<cr>", { desc = "Show All Xcodebuild Actions" })
+vim.keymap.set("n", "<leader>id", "<cmd>XcodebuildSelectDevice<cr>", { desc = "Select Device" })
+vim.keymap.set("n", "<leader>ip", "<cmd>XcodebuildSelectTestPlan<cr>", { desc = "Select Test Plan" })
+vim.keymap.set("n", "<leader>ic", "<cmd>XcodebuildToggleCodeCoverage<cr>", { desc = "Toggle Code Coverage" })
+vim.keymap.set("n", "<leader>iC", "<cmd>XcodebuildShowCodeCoverageReport<cr>", { desc = "Show Code Coverage Report" })
+vim.keymap.set("n", "<leader>iq", "<cmd>Telescope quickfix<cr>", { desc = "Show QuickFix List" })
