@@ -29,7 +29,7 @@ require("lazy").setup({
             "hrsh7th/nvim-cmp",
             "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/cmp-cmdline",
-            "L3MON4D3/LuaSnip",
+            "l3mon4d3/luasnip",
         },
         config = function()
             require("user.config.plugins.lsp") -- ~/.config/nvim/lua/user/config/plugins/lsp.lua
@@ -122,11 +122,6 @@ require("lazy").setup({
     {
         "altermo/ultimate-autopair.nvim",
         event = { "InsertEnter", "CmdLineEnter" },
-        opts = {},
-    },
-    {
-        "numToStr/Comment.nvim",
-        event = { "BufReadPre", "BufNewFile" },
         opts = {},
     },
     {
