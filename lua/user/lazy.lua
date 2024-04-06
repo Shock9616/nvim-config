@@ -49,19 +49,6 @@ require("lazy").setup({
         end,
     },
 
-    -- DAP
-    {
-        "rcarriga/nvim-dap-ui",
-        dependencies = {
-            "mfussenegger/nvim-dap",
-            "nvim-neotest/nvim-nio",
-        },
-        event = "VeryLazy",
-        config = function()
-            require("user.config.plugins.dap") -- ~/.config/nvim/lua/user/config/plugins/dap.lua
-        end,
-    },
-
     -- Treesitter
     {
         "nvim-treesitter/nvim-treesitter",

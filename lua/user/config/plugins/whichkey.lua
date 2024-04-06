@@ -21,7 +21,7 @@ wk.register({
         f = "+File",
         l = "+LSP",
         w = "+Window",
-        x = "+Diagnostics",
-        d = "+Debug",
+        d = "+Debug/Diagnostics",
+        x = "+Xcode",
     },
 })
