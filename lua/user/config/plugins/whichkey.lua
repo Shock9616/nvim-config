@@ -22,6 +22,9 @@ wk.register({
         l = "+LSP",
         w = "+Window",
         d = "+Debug/Diagnostics",
-        x = "+Xcode",
+        x = {
+            name = "+Xcode",
+            d = "+Debug",
+        },
     },
 })
