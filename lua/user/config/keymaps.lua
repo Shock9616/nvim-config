@@ -11,11 +11,11 @@ vim.keymap.set({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, si
 -- Better redo
 vim.keymap.set("n", "U", "<C-r>", { desc = "Redo" })
 
--- Move to window using the <ctrl> hjkl keys
-vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Window left", remap = true })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Window down", remap = true })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Window up", remap = true })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Window right", remap = true })
+-- Move to pane in Nvim or multiplexer
+vim.keymap.set({ "n", "t" }, "<C-h>", "<cmd>NavigatorLeft<cr>", { desc = "Window left", remap = true })
+vim.keymap.set({ "n", "t" }, "<C-j>", "<cmd>NavigatorDown<cr>", { desc = "Window down", remap = true })
+vim.keymap.set({ "n", "t" }, "<C-k>", "<cmd>NavigatorUp<cr>", { desc = "Window up", remap = true })
+vim.keymap.set({ "n", "t" }, "<C-l>", "<cmd>NavigatorRight<cr>", { desc = "Window right", remap = true })
 
 -- Resize window using <ctrl> arrow keys
 vim.keymap.set("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
