@@ -1,7 +1,7 @@
 --
 -- options.lua
 --
--- Built-in options configuration
+-- General NeoVim options
 --
 
 -- Set keymap leader key
@@ -35,7 +35,7 @@ vim.opt.smartindent = true             -- Insert indents automatically
 vim.opt.clipboard = "unnamedplus"      -- Sync w/ system clipboard
 vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.wildmode = "longest:full,full" -- Command-line completion mode
-vim.opt.inccommand = "nosplit"         -- Preview incremental substitute
+vim.opt.inccommand = "split"         -- Preview substitutions live
 vim.opt.pumblend = 0                   -- Popup blend
 vim.opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize" }
 vim.opt.shortmess:append({ W = true, c = true, I = true })
@@ -45,8 +45,8 @@ vim.opt.shiftround = true -- Round indent to multiple of shiftwidth
 vim.opt.shiftwidth = 4    -- Size of an indent
 vim.opt.tabstop = 4       -- Number of spaces tabs count for
 
-vim.opt.scrolloff = 8     -- Lines of context
-vim.opt.sidescrolloff = 8 -- Columns of context
+vim.opt.scrolloff = 10     -- Lines of context
+vim.opt.sidescrolloff = 10 -- Columns of context
 
 vim.opt.grepformat = "%f:%l:%c:%m"
 vim.opt.grepprg = "rg --vimgrep"
@@ -57,6 +57,8 @@ vim.opt.splitright = true -- Vertical split right of current window
 vim.opt.laststatus = 0
 vim.opt.list = false
 vim.opt.spelllang = { "en" }
+
+vim.opt.updatetime = 250 -- Decrease update time
 
 -- Set python3 executable
 vim.g.python3_host_prog = "~/.config/nvim/pynvim/bin/python3"
