@@ -159,7 +159,7 @@ require("lazy").setup({
 		"stevearc/oil.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		event = "VeryLazy",
-		config = function(self, opts)
+		config = function()
 			require("oil").setup({
 				default_file_explorere = true,
 				delete_to_trash = true,
@@ -186,6 +186,7 @@ require("lazy").setup({
 			vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "[F]ind [F]iles" })
 			vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Live [G]rep" })
 			vim.keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "[R]ecent Files" })
+			vim.keymap.set("n", "<leader>fd", "<cmd>Telescope diagnostics<cr>", { desc = "[F]ind [D]iagnostics" })
 			vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "[B]uffers" })
 			vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "[T]odo Comments" })
 			vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "[H]elp Tags" })

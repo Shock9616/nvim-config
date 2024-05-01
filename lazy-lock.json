@@ -9,6 +9,7 @@
   "configpulse": { "branch": "main", "commit": "f045aabd4b070b39c70f1fe9a7b1e6e9d18a9660" },
   "conform.nvim": { "branch": "master", "commit": "4660e534bf7678ee0f85879aa75fdcb6855612c2" },
   "friendly-snippets": { "branch": "main", "commit": "ea068f1becd91bcd4591fceb6420d4335e2e14d3" },
+  "fsplash.nvim": { "branch": "master", "commit": "efd4565bbeb526a93c9cb25c24bd8123e1af63ee" },
   "gitsigns.nvim": { "branch": "main", "commit": "035da036e68e509ed158414416c827d022d914bd" },
   "headlines.nvim": { "branch": "master", "commit": "618ef1b2502c565c82254ef7d5b04402194d9ce3" },
   "indent-blankline.nvim": { "branch": "master", "commit": "3d08501caef2329aba5121b753e903904088f7e6" },
