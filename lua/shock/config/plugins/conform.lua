@@ -13,7 +13,7 @@ require("conform").setup({
 		c = { "clang_format" },
 		cpp = { "clang_format" },
 		java = { "clang_format" },
-		javascript = { "clang_format" },
+		-- javascript = { "clang_format" },
 		json = { "clang_format" },
 		markdown = { "deno_fmt" },
 	},
