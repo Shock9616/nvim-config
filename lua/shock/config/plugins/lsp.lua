@@ -102,6 +102,15 @@ local servers = {
 	},
 }
 
+-- Setup SoruceKit LSP for Swift
+-- SourceKit is not recognized by Mason, so it must be set up separately
+require("lspconfig").sourcekit.setup({
+	cmd = {
+		"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
+	},
+	filetpes = { "swift" },
+})
+
 require("mason").setup({
 	ui = {
 		border = "rounded",
