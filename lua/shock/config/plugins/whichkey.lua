@@ -17,18 +17,18 @@ wk.setup({
 
 wk.register({
 	["<leader>"] = {
-		b = "+Buffer",
-		f = "+File",
+		b = "+[B]uffer",
+		f = "+[F]ile",
 		l = {
-			name = "+LSP",
-			d = "[D]ocument",
-			w = "[W]orkspace",
+			name = "+[L]SP",
+			d = "+[D]ocument",
+			w = "+[W]orkspace",
 		},
-		w = "+Window",
-		d = "+Debug/Diagnostics",
+		w = "+[W]indow",
+		d = "+[D]ebug/[D]iagnostics",
 		x = {
-			name = "+Xcode",
-			d = "+Debug",
+			name = "+[X]code",
+			d = "+[D]ebug",
 		},
 	},
 })

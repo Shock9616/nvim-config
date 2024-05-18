@@ -278,4 +278,4 @@ require("lazy").setup({
 })
 
 -- Set keymap to open Lazy UI
-vim.keymap.set("n", "<leader>L", "<cmd>Lazy<cr>", { desc = "Lazy" })
+vim.keymap.set("n", "<leader>L", "<cmd>Lazy<cr>", { desc = "[L]azy" })

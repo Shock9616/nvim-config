@@ -118,7 +118,7 @@ require("mason").setup({
 })
 
 -- Set keymap to open Mason UI
-vim.keymap.set("n", "<leader>M", "<cmd>Mason<cr>", { desc = "Mason" })
+vim.keymap.set("n", "<leader>M", "<cmd>[M]ason<cr>", { desc = "Mason" })
 
 local ensure_installed = vim.tbl_keys(servers or {})
 vim.list_extend(ensure_installed, {
