@@ -43,6 +43,30 @@ return {
 			require("dapui").open({ reset = true })
 		end, { desc = "[R]eset Windows" })
 
+		---------- Adapters ----------
+
+		dap.adapters.lldb = {
+			type = "executable",
+			command = "/Users/kalebrosborough/.vscode/extensions/vadimcn.vscode-lldb-1.10.0/lldb/bin/lldb",
+			name = "lldb",
+		}
+
+		---------- Configurations ----------
+
+		dap.configurations.cpp = {
+			{
+				name = "Launch",
+				type = "lldb",
+				request = "launch",
+				program = function()
+					return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+				end,
+				cwd = "${workspaceFolder}",
+				stopOnEntry = false,
+				args = {},
+			},
+		}
+
 		-- Xcodebuild Debug Setup
 		local xcodebuild = require("xcodebuild.integrations.dap")
 		local codelldbPath = os.getenv("HOME") .. "/.bin/codelldb-aarch64-darwin/extension/adapter/codelldb"
