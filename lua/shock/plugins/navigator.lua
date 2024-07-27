@@ -6,6 +6,7 @@
 
 return {
 	"numToStr/Navigator.nvim",
+	event = "VeryLazy",
 	config = function()
 		vim.keymap.set({ "n", "t" }, "<C-h>", "<cmd>NavigatorLeft<cr>", { desc = "Window left", remap = true })
 		vim.keymap.set({ "n", "t" }, "<C-j>", "<cmd>NavigatorDown<cr>", { desc = "Window down", remap = true })
