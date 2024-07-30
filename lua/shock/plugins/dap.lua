@@ -45,10 +45,16 @@ return {
 
 		---------- Adapters ----------
 
-		dap.adapters.lldb = {
-			type = "executable",
-			command = "/Users/kalebrosborough/.vscode/extensions/vadimcn.vscode-lldb-1.10.0/lldb/bin/lldb",
-			name = "lldb",
+		dap.adapters.codelldb = {
+			type = "server",
+			port = "1234",
+			executable = {
+				command = table.concat({
+					vim.fn.stdpath("data"),
+					"/mason/packages/codelldb/extension/adapter/codelldb",
+				}),
+				args = { "--port", "1234" },
+			},
 		}
 
 		---------- Configurations ----------
@@ -56,7 +62,7 @@ return {
 		dap.configurations.cpp = {
 			{
 				name = "Launch",
-				type = "lldb",
+				type = "codelldb",
 				request = "launch",
 				program = function()
 					return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")

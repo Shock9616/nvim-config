@@ -140,7 +140,6 @@ return {
 			"clang-format",
 			"clangd",
 			"codelldb",
-			"cpplint",
 			"mdformat",
 			"pyright",
 			"ruff",

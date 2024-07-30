@@ -64,7 +64,7 @@ vim.keymap.set("n", "<leader>w<Up>", "<cmd>resize +10<cr>", { desc = "Increase W
 vim.keymap.set("n", "<leader>w<Down>", "<cmd>resize -10<cr>", { desc = "Decrease Window Height" })
 vim.keymap.set("n", "<leader>w<Left>", "<cmd>vertical resize -10<cr>", { desc = "Decrease Window Width" })
 vim.keymap.set("n", "<leader>w<Right>", "<cmd>vertical resize +10<cr>", { desc = "Increase Window Width" })
-vim.keymap.set("n", "<leader>wq", "<cmd>:wq<cr>", { desc = "Save and Close Window" })
+vim.keymap.set("n", "<leader>wq", "<cmd>wq<cr>", { desc = "Save and Close Window" })
 
 -- LSP
 vim.keymap.set("n", "<leader>li", "<cmd>LspInfo<cr>", { desc = "Buffer Lsp [I]nfo" })
