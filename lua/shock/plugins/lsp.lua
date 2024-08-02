@@ -11,7 +11,7 @@ return {
 		"neovim/nvim-lspconfig",
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/nvim-cmp",
-		"willamboman/mason.nvim",
+		{ "williamboman/mason.nvim", config = true },
 		"williamboman/mason-lspconfig.nvim",
 		{ "folke/neodev.nvim", opts = {} },
 	},
@@ -50,6 +50,9 @@ return {
 				border = "rounded",
 			},
 		})
+
+		-- Set keymap to open Mason UI
+		vim.keymap.set("n", "<leader>M", "<cmd>Mason<cr>")
 
 		require("mason-lspconfig").setup({
 			ensure_installed = {
