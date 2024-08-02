@@ -15,6 +15,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		{ "folke/neodev.nvim", opts = {} },
 	},
+	event = "VeryLazy",
 	config = function()
 		local lsp_zero = require("lsp-zero")
 
