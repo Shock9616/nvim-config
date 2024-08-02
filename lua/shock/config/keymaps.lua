@@ -50,9 +50,7 @@ vim.keymap.set("n", "<leader>C", "<cmd>e ~/.config/nvim/init.lua<cr>", { desc = 
 vim.keymap.set("n", "<leader>fn", "<cmd>enew<cr>", { desc = "[N]ew [F]ile" })
 
 -- Buffer
-vim.keymap.set("n", "<leader>bf", function()
-	vim.lsp.buf.format()
-end, { desc = "[F]ormat Buffer" })
+vim.keymap.set("n", "<leader>bf", vim.lsp.buf.format, { desc = "[F]ormat Buffer" })
 vim.keymap.set("n", "<leader>bd", "<cmd>bd<cr>", { desc = "[D]elete Buffer" })
 vim.keymap.set("n", "<leader>ba", "ggVG", { desc = "Select [A]ll" })
 vim.keymap.set("n", "<leader>bc", "zz", { desc = "[C]enter current line" })

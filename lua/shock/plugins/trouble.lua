@@ -4,19 +4,19 @@ return {
 	opts = {},
 	keys = {
 		{
-			"<leader>td",
+			"<leader>xd",
 			"<cmd>Trouble diagnostics toggle<cr>",
-			desc = "[T]oggle [D]iagnostics",
+			desc = "Toggle [D]iagnostics",
 		},
 		{
-			"<leader>ts",
+			"<leader>xs",
 			"<cmd>Trouble symbols toggle focus=false<cr>",
-			desc = "[T]oggle [S]ymbols",
+			desc = "Toggle [S]ymbols",
 		},
 		{
-			"<leader>tq",
+			"<leader>xq",
 			"<cmd>Trouble qflist toggle<cr>",
-			desc = "[T]oggle [Q]uickfix List",
+			desc = "Toggle [Q]uickfix List",
 		},
 	},
 }

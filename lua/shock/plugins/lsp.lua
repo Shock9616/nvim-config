@@ -22,13 +22,28 @@ return {
 		local lsp_attach = function(client, bufnr)
 			local opts = { buffer = bufnr }
 
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-			vim.keymap.set("n", "gd", require("telescope.builtin").lsp_definitions, opts)
-			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-			vim.keymap.set("n", "gi", require("telescope.builtin").lsp_implementations, opts)
-			vim.keymap.set("n", "go", vim.lsp.buf.type_definition, opts)
-			vim.keymap.set("n", "gr", require("telescope.builtin").lsp_references, opts)
-			vim.keymap.set("n", "gs", vim.lsp.buf.signature_help, opts)
+			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover", buffer = bufnr })
+			vim.keymap.set(
+				"n",
+				"gd",
+				require("telescope.builtin").lsp_definitions,
+				{ desc = "[G]oto [D]efinition", buffer = bufnr }
+			)
+			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "[G]oto [D]eclaration", buffer = bufnr })
+			vim.keymap.set(
+				"n",
+				"gi",
+				require("telescope.builtin").lsp_implementations,
+				{ desc = "[G]oto [I]mplementations", buffer = bufnr }
+			)
+			vim.keymap.set("n", "go", vim.lsp.buf.type_definition, { desc = "[G]oto Type Definition", buffer = bufnr })
+			vim.keymap.set(
+				"n",
+				"gr",
+				require("telescope.builtin").lsp_references,
+				{ desc = "[G]oto [R]eferences", buffer = bufnr }
+			)
+			vim.keymap.set("n", "gs", vim.lsp.buf.signature_help, { desc = "[G]oto [S]ignature Help" })
 		end
 
 		vim.api.nvim_create_autocmd("LspDetach", {
