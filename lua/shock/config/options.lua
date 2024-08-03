@@ -27,6 +27,7 @@ vim.opt.undodir = ".nvim/undodir/"
 vim.opt.undofile = true
 vim.opt.undolevels = 10000
 vim.opt.confirm = true -- Confirm to save changes before exiting modified buffer
+vim.opt.compatible = false -- Who even needs vi compatibility?
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true -- Don't ignore case with capitals

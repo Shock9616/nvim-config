@@ -46,6 +46,9 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- Open config
 vim.keymap.set("n", "<leader>C", "<cmd>e ~/.config/nvim/init.lua<cr>", { desc = "Edit [C]onfig" })
 
+-- Replace selected text in buffer
+vim.keymap.set("v", "<leader>R", '"hy:%s/<C-r>h//g<left><left>', { desc = "[R]ename selected" })
+
 -- File
 vim.keymap.set("n", "<leader>fn", "<cmd>enew<cr>", { desc = "[N]ew [F]ile" })
 

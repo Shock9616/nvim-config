@@ -68,7 +68,7 @@ return {
 		})
 
 		-- Set keymap to open Mason UI
-		vim.keymap.set("n", "<leader>M", "<cmd>Mason<cr>")
+		vim.keymap.set("n", "<leader>M", "<cmd>[M]ason<cr>")
 
 		require("mason-lspconfig").setup({
 			ensure_installed = {
