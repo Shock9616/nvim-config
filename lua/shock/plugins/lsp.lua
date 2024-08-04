@@ -15,7 +15,6 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		{ "folke/neodev.nvim", opts = {} },
 	},
-	event = "VeryLazy",
 	config = function()
 		local lsp_zero = require("lsp-zero")
 
@@ -68,7 +67,7 @@ return {
 		})
 
 		-- Set keymap to open Mason UI
-		vim.keymap.set("n", "<leader>M", "<cmd>[M]ason<cr>")
+		vim.keymap.set("n", "<leader>M", "<cmd>Mason<cr>", { desc = "[M]ason" })
 
 		require("mason-lspconfig").setup({
 			ensure_installed = {
