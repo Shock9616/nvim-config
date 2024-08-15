@@ -62,7 +62,7 @@ vim.opt.spelllang = { "en" }
 vim.opt.updatetime = 250 -- Decrease update time
 
 -- Set python3 executable
-vim.g.python3_host_prog = "~/.config/nvim/pynvim/bin/python3"
+vim.g.python3_host_prog = vim.fn.stdpath("config") .. "/pynvim/bin/python3"
 
 -- Disable unused language providers
 vim.g.loaded_perl_provider = 0
