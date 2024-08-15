@@ -16,7 +16,7 @@ return {
 			cpp = { "clang_format" },
 			java = { "clang_format" },
 			json = { "jq" },
-			markdown = { "deno_fmt" },
+			markdown = { "deno_fmt", "cbfmt" },
 		},
 		format_on_save = {
 			timeout_ms = 500,

@@ -43,15 +43,25 @@ return {
 				{ desc = "[G]oto [R]eferences", buffer = bufnr }
 			)
 			vim.keymap.set("n", "gs", vim.lsp.buf.signature_help, { desc = "[G]oto [S]ignature Help" })
+			vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, { desc = "[R]ename Symbol" })
+			vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "[F]ormat Buffer" })
+			vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { desc = "Code [A]ction" })
+			vim.keymap.set(
+				"n",
+				"<leader>lD",
+				require("telescope.builtin").lsp_type_definitions,
+				{ desc = "Type [D]efinitions" }
+			)
+			if client.server_capabilities.inlayHintProvider then
+				vim.keymap.set("n", "<leader>lh", function()
+					if vim.lsp.inlay_hint.is_enabled() then
+						vim.lsp.inlay_hint.enable(false)
+					else
+						vim.lsp.inlay_hint.enable(true)
+					end
+				end, { desc = "Toggle Inlay [H]ints" })
+			end
 		end
-
-		vim.api.nvim_create_autocmd("LspDetach", {
-			group = vim.api.nvim_create_augroup("lsp-detach", { clear = true }),
-			callback = function(event)
-				vim.lsp.buf.clear_references()
-				vim.api.nvim_clear_autocmds({ group = "lsp-highlight", buffer = event.buf })
-			end,
-		})
 
 		lsp_zero.extend_lspconfig({
 			sign_text = true,
