@@ -11,7 +11,6 @@ return {
 	config = function()
 		require("catppuccin").setup({
 			flavour = "macchiato",
-			transparent_background = true,
 			integrations = {
 				cmp = true,
 				gitsigns = true,
