@@ -12,9 +12,9 @@ return {
 	},
 	event = "VeryLazy",
 	config = function()
-		require("dapui").setup()
-
 		local dap, dapui = require("dap"), require("dapui")
+
+		dapui.setup()
 
 		dap.listeners.after.event_initialized["dapui_config"] = function()
 			dapui.open()
@@ -30,18 +30,6 @@ return {
 			"DapBreakpoint",
 			{ text = "", texthl = "DapBreakpoint", linehl = "DapBreakpoint", numhl = "DapBreakpoint" }
 		)
-
-		vim.keymap.set("n", "<leader>dt", function()
-			require("dapui").toggle()
-		end, { desc = "[T]oggle UI" })
-		vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>", { desc = "Toggle [B]reakpoint" })
-		vim.keymap.set("n", "<leader>dx", "<cmd>DapTerminate<cr>", { desc = "Terminate Debugger" })
-		vim.keymap.set("n", "<F9>", "<cmd>DapStepOver<cr>", { desc = "Step Over" })
-		vim.keymap.set("n", "<F8>", "<cmd>DapStepInto<cr>", { desc = "Step Into" })
-		vim.keymap.set("n", "<F7>", "<cmd>DapStepOut<cr>", { desc = "Step Out" })
-		vim.keymap.set("n", "<leader>dr", function()
-			require("dapui").open({ reset = true })
-		end, { desc = "[R]eset Windows" })
 
 		---------- Adapters ----------
 
@@ -73,4 +61,45 @@ return {
 			},
 		}
 	end,
+	keys = {
+		{
+			"<leader>dt",
+			function()
+				require("dapui").toggle()
+			end,
+			desc = "[T]oggle UI",
+		},
+		{
+			"<leader>db",
+			"<cmd>DapToggleBreakpoint<cr>",
+			desc = "Toggle [B]reakpoint",
+		},
+		{
+			"<leader>dx",
+			"<cmd>DapTerminate<cr>",
+			desc = "Terminate Debugger",
+		},
+		{
+			"<F7>",
+			"<cmd>DapStepOut",
+			desc = "Step Out",
+		},
+		{
+			"<F8>",
+			"<cmd>DapStepInto",
+			desc = "Step Into",
+		},
+		{
+			"<F9>",
+			"<cmd>DapStepOver<cr>",
+			desc = "Step Over",
+		},
+		{
+			"<leader>dr",
+			function()
+				require("dapui").open({ reset = true })
+			end,
+			desc = "[R]eset Windows",
+		},
+	},
 }

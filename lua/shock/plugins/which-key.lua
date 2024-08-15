@@ -1,3 +1,9 @@
+--
+-- which-key.lua
+--
+-- Keymap cheat-sheet
+--
+
 return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",

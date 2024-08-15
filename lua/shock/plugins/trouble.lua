@@ -1,3 +1,9 @@
+--
+-- trouble.lua
+--
+-- Nice diagnostics and quickfix list
+--
+
 return {
 	"folke/trouble.nvim",
 	event = "VeryLazy",

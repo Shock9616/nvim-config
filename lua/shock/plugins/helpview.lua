@@ -1,7 +1,13 @@
+--
+-- helpview.lua
+--
+-- Making the Neovim docs readable!
+--
+
 return {
 	"OXY2DEV/helpview.nvim",
-	ft = "help",
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter",
 	},
+	ft = "help",
 }

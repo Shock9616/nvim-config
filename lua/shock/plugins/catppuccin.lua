@@ -25,6 +25,6 @@ return {
 				LspInlayHint = { bg = "#1e2030" },
 			},
 		})
-		vim.cmd("colorscheme catppuccin")
+		vim.cmd.colorscheme("catppuccin")
 	end,
 }
