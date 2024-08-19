@@ -26,12 +26,6 @@ return {
 						only_render_image_at_cursor = true,
 						filetypes = { "markdown", "vimwiki" },
 					},
-					html = {
-						enabled = true,
-					},
-					css = {
-						enabled = true,
-					},
 				},
 				max_height_window_percentage = 40,
 				hijack_file_patterns = { "*.png", "*.jpg", "*.jpeg", "*.gif", "*.webp", "*.avif" },
