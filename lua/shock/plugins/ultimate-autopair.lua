@@ -7,5 +7,8 @@
 return {
 	"altermo/ultimate-autopair.nvim",
 	event = { "InsertEnter", "CmdLineEnter" },
-	opts = {},
+	opts = {
+		cmap = false,
+		pair_cmap = false,
+	},
 }
