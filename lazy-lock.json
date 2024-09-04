@@ -1,6 +1,7 @@
 {
   "LuaSnip": { "branch": "master", "commit": "45db5addf8d0a201e1cf247cae4cdce605ad3768" },
   "Navigator.nvim": { "branch": "master", "commit": "91d86506ac2a039504d5205d32a1d4bc7aa57072" },
+  "async.vim": { "branch": "master", "commit": "2082d13bb195f3203d41a308b89417426a7deca1" },
   "bullets.vim": { "branch": "master", "commit": "2253f970e54320dbd76fd6bb4f5a0bf2436ce232" },
   "catppuccin": { "branch": "main", "commit": "4fd72a9ab64b393c2c22b168508fd244877fec96" },
   "cmp-cmdline": { "branch": "main", "commit": "d250c63aa13ead745e3a40f61fdd3470efde3923" },
@@ -34,6 +35,7 @@
   "todo-comments.nvim": { "branch": "main", "commit": "319c01b99b7a8c9ac2066bf0efd4d6ec68fef444" },
   "trouble.nvim": { "branch": "main", "commit": "6efc446226679fda0547c0fd6a7892fd5f5b15d8" },
   "ultimate-autopair.nvim": { "branch": "v0.6", "commit": "53ed7c65e466963c916251f9ce6df7dd3685dc36" },
+  "vim-arsync": { "branch": "master", "commit": "dd5fd93182aafb67ede2ef465f379610980b52d3" },
   "vim-table-mode": { "branch": "master", "commit": "e4365bde024f73e205eefa2fb78e3029ddb92ea9" },
   "which-key.nvim": { "branch": "main", "commit": "bfec3d6bc0a9b0b2cb11644642f78c2c3915eef0" }
 }
