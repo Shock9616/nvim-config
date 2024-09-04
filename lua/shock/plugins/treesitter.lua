@@ -62,18 +62,14 @@ return {
 						["al"] = { query = "@loop.outer", desc = "Select the outer part of a loop" },
 						["il"] = { query = "@loop.inner", desc = "Select the inner part of a loop" },
 
-						-- Function calls
-						["af"] = { query = "@call.outer", desc = "Select the outer part of a function call" },
-						["if"] = { query = "@call.inner", desc = "Select the inner part of a function call" },
-
 						-- Function/method definitions
-						["am"] = {
+						["af"] = {
 							query = "@function.outer",
-							desc = "Select the outer part of a method/function definition",
+							desc = "Select the outer part of a function/method definition",
 						},
-						["im"] = {
+						["if"] = {
 							query = "@function.inner",
-							desc = "Select the inner part of a method/function definition",
+							desc = "Select the inner part of a function/method definition",
 						},
 
 						-- Class
