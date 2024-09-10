@@ -17,13 +17,13 @@ return {
 			java = { "clang_format" },
 			json = { "jq" },
 			markdown = { "deno_fmt", "cbfmt" },
-            html = { "prettier" },
-            css = { "prettier" },
-            javascript = { "prettier" },
+			html = { "prettier" },
+			css = { "prettier" },
+			javascript = { "prettier" },
 		},
 		format_on_save = {
 			timeout_ms = 500,
-            lsp_format = "fallback",
+			lsp_format = "fallback",
 		},
 	},
 }
