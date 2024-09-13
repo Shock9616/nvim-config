@@ -24,5 +24,10 @@ return {
 			"<cmd>Trouble qflist toggle<cr>",
 			desc = "Toggle [Q]uickfix List",
 		},
+		{
+			"<leader>xt",
+			"<cmd>Trouble todo toggle<cr>",
+			desc = "Toggle [T]odo List",
+		},
 	},
 }
