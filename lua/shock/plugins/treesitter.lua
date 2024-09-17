@@ -63,13 +63,21 @@ return {
 						["il"] = { query = "@loop.inner", desc = "Select the inner part of a loop" },
 
 						-- Function/method definitions
-						["af"] = {
+						["afd"] = {
 							query = "@function.outer",
 							desc = "Select the outer part of a function/method definition",
 						},
-						["if"] = {
+						["ifd"] = {
 							query = "@function.inner",
 							desc = "Select the inner part of a function/method definition",
+						},
+						["afc"] = {
+							query = "@call.outer",
+							desc = "Select the outer part of a function call",
+						},
+						["ifc"] = {
+							query = "@call.inner",
+							desc = "Select the inner part of a function call",
 						},
 
 						-- Class
