@@ -36,6 +36,7 @@
   "trouble.nvim": { "branch": "main", "commit": "6efc446226679fda0547c0fd6a7892fd5f5b15d8" },
   "ultimate-autopair.nvim": { "branch": "v0.6", "commit": "ff21db642847840db183b9421ab3d89795a7fbba" },
   "vim-arsync": { "branch": "master", "commit": "dd5fd93182aafb67ede2ef465f379610980b52d3" },
+  "vim-showmarks": { "branch": "master", "commit": "1966a54616cc5b9483dcced8c640f508e2a46c4e" },
   "vim-table-mode": { "branch": "master", "commit": "e4365bde024f73e205eefa2fb78e3029ddb92ea9" },
   "which-key.nvim": { "branch": "main", "commit": "bfec3d6bc0a9b0b2cb11644642f78c2c3915eef0" }
 }
