@@ -10,6 +10,12 @@ return {
 	main = "render-markdown",
 	ft = { "markdown" },
 	config = function()
+		require("render-markdown").setup({
+			latex = {
+				enabled = false,
+			},
+		})
+
 		vim.api.nvim_set_hl(0, "RenderMarkdownH1Bg", { bg = "#363a4f" })
 		vim.api.nvim_set_hl(0, "RenderMarkdownH2Bg", { bg = "#363a4f" })
 		vim.api.nvim_set_hl(0, "RenderMarkdownH3Bg", { bg = "#363a4f" })
