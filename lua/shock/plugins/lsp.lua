@@ -106,6 +106,17 @@ return {
 			},
 		})
 
+		local capabilities = vim.lsp.protocol.make_client_capabilities()
+		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+
+		require("lspconfig").gdscript.setup({
+			force_setup = true,
+			single_file_support = false,
+			cmd = { "ncat", "127.0.0.1", "6005" },
+			root_dir = require("lspconfig.util").root_pattern("project.godot", ".git"),
+			filetypes = { "gd", "gdscript", "gdscript3" },
+		})
+
 		-- Setup custom diagnostics signs
 		local diagnostics_signs = {
 			{ name = "DiagnosticSignError", text = "" },

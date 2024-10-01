@@ -72,3 +72,10 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 -- Not actually an autocmd, but this is MY config, I'll do what I want
 -- Replace 'xdate' with current date in mm/dd/yy format
 vim.cmd("iab xdate <c-r>=strftime('%m-%d-%Y')<cr>")
+
+-- Also not actually an autocmd lol
+-- Setup for using nvim as an external editor for Godot
+-- local gd_proj_file = vim.fn.getcwd() .. "/project.godot"
+-- if gd_proj_file then
+-- 	vim.fn.serverstart("./godothost")
+-- end
