@@ -38,6 +38,7 @@ vim.keymap.set("n", "J", "mzJ`z")
 -- Keep cursor in the center when scrolling
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "G", "Gzz")
 
 -- Keep search terms in the center
 vim.keymap.set("n", "n", "nzzzv")
