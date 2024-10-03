@@ -10,7 +10,11 @@ return {
 	event = "VeryLazy",
 	opts = {
 		defaults = {
-			file_ignore_patterns = { "lazy%-lock.json" },
+			file_ignore_patterns = {
+				"lazy%-lock.json",
+				"venv/*",
+				"%_%_pycache%_%_/*",
+			},
 		},
 	},
 	keys = {
