@@ -81,10 +81,16 @@ return {
 
 		require("mason-lspconfig").setup({
 			ensure_installed = {
-				"lua_ls",
-				-- "pyright",
+				-- Python
+				"basedpyright",
 				"ruff",
+
+				-- C/C++
 				"clangd",
+				"clang-format",
+
+				-- Lua
+				"lua_ls",
 			},
 			handlers = {
 				function(server_name)
