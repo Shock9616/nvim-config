@@ -16,11 +16,14 @@ return {
 			},
 		})
 
-		vim.api.nvim_set_hl(0, "RenderMarkdownH1Bg", { bg = "#363a4f" })
-		vim.api.nvim_set_hl(0, "RenderMarkdownH2Bg", { bg = "#363a4f" })
-		vim.api.nvim_set_hl(0, "RenderMarkdownH3Bg", { bg = "#363a4f" })
-		vim.api.nvim_set_hl(0, "RenderMarkdownH4Bg", { bg = "#363a4f" })
-		vim.api.nvim_set_hl(0, "RenderMarkdownH5Bg", { bg = "#363a4f" })
-		vim.api.nvim_set_hl(0, "RenderMarkdownH6Bg", { bg = "#363a4f" })
+		local colors = require("catppuccin.palettes").get_palette("macchiato")
+
+		vim.api.nvim_set_hl(0, "RenderMarkdownH1Bg", { bg = colors.surface0 })
+		vim.api.nvim_set_hl(0, "RenderMarkdownH2Bg", { bg = colors.surface0 })
+		vim.api.nvim_set_hl(0, "RenderMarkdownH3Bg", { bg = colors.surface0 })
+		vim.api.nvim_set_hl(0, "RenderMarkdownH4Bg", { bg = colors.surface0 })
+		vim.api.nvim_set_hl(0, "RenderMarkdownH5Bg", { bg = colors.surface0 })
+		vim.api.nvim_set_hl(0, "RenderMarkdownH6Bg", { bg = colors.surface0 })
+		vim.api.nvim_set_hl(0, "RenderMarkdownCode", { bg = colors.surface0 })
 	end,
 }
