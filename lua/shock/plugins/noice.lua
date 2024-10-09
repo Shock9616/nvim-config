@@ -19,20 +19,10 @@ return {
 				["cmp.entry.get_documentation"] = true,
 			},
 		},
-		cmdline = {
-			view = "cmdline",
-			format = {
-				search_down = {
-					view = "cmdline",
-				},
-				search_up = {
-					view = "cmdline",
-				},
-			},
-		},
 		presets = {
 			long_message_to_split = true,
 			lsp_doc_border = true,
+			inc_rename = false,
 		},
 		messages = {
 			enabled = true,
