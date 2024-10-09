@@ -21,7 +21,6 @@ return {
 				"vimdoc",
 				"python",
 				"rust",
-				"swift",
 				"c",
 				"cpp",
 				"java",
