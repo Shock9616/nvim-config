@@ -9,8 +9,10 @@ return {
 	name = "catppuccin",
 	priority = 1000,
 	config = function()
+		local flavour = "macchiato"
+
 		require("catppuccin").setup({
-			flavour = "macchiato",
+			flavour = flavour,
 			transparent_background = true,
 			integrations = {
 				cmp = true,
@@ -26,5 +28,18 @@ return {
 			},
 		})
 		vim.cmd.colorscheme("catppuccin")
+
+		-- Customizing global highlight groups
+		local colors = require("catppuccin.palettes").get_palette(flavour)
+
+		local HlGroups = {
+			FloatBorder = {
+				fg = colors.overlay2,
+			},
+		}
+
+		for hl, color in pairs(HlGroups) do
+			vim.api.nvim_set_hl(0, hl, color)
+		end
 	end,
 }
