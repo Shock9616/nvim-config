@@ -87,7 +87,6 @@ return {
 
 				-- C/C++
 				"clangd",
-				"clang-format",
 
 				-- Lua
 				"lua_ls",
