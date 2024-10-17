@@ -1,3 +1,0 @@
-return {
-	"jacquesbh/vim-showmarks",
-}
