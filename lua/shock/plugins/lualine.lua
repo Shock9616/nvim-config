@@ -43,7 +43,7 @@ return {
 				theme = custom_catppuccin,
 				component_separators = "",
 				section_separators = { left = "", right = "" },
-				disabled_filetypes = { "alpha" },
+				disabled_filetypes = { "alpha", "Outline" },
 			},
 			sections = {
 				lualine_a = {
