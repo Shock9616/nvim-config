@@ -66,13 +66,6 @@ return {
 			end,
 			desc = "[F]ind [B]uffers",
 		},
-		-- {
-		--     "<leader>ft",
-		--     function ()
-		--         Snacks.picker.todo()
-		--     end,
-		--     desc = "[T]odo Comments",
-		-- },
 		{
 			"<leader>fh",
 			function()
