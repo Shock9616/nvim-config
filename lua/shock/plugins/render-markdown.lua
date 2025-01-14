@@ -14,6 +14,11 @@ return {
 			latex = {
 				enabled = false,
 			},
+			html = {
+				comment = {
+					conceal = false,
+				},
+			},
 		})
 
 		local colors = require("catppuccin.palettes").get_palette("macchiato")
