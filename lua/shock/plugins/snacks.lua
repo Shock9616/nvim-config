@@ -5,7 +5,31 @@ return {
 		animate = { enabled = false },
 		bigfile = {},
 		bufdelete = { enabled = false },
-		dashboard = { enabled = false },
+		dashboard = {
+			preset = {
+				header = [[
+ ▄▄▄  ▄▄▄  ▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄      ▄▄▄▄     ▄▄▄▄▄▄   ▄▄▄▄▄     ▄▄    ▄▄   ▄▄▄▄▄▄   ▄▄▄  ▄▄▄
+ ███  ███  ██▀▀▀▀▀▀  ▀▀▀██▀▀▀  ██▀▀▀▀██   ██▀▀██    ▀▀██▀▀   ██▀▀▀██   ▀██  ██▀   ▀▀██▀▀   ███  ███
+ ████████  ██           ██     ██    ██  ██    ██     ██     ██    ██   ██  ██      ██     ████████
+ ██ ██ ██  ███████      ██     ███████   ██    ██     ██     ██    ██   ██  ██      ██     ██ ██ ██
+ ██ ▀▀ ██  ██           ██     ██  ▀██▄  ██    ██     ██     ██    ██    ████       ██     ██ ▀▀ ██
+ ██    ██  ██▄▄▄▄▄▄     ██     ██    ██   ██▄▄██    ▄▄██▄▄   ██▄▄▄██     ████     ▄▄██▄▄   ██    ██
+ ▀▀    ▀▀  ▀▀▀▀▀▀▀▀     ▀▀     ▀▀    ▀▀▀   ▀▀▀▀     ▀▀▀▀▀▀   ▀▀▀▀▀       ▀▀▀▀     ▀▀▀▀▀▀   ▀▀    ▀▀
+]],
+			},
+			sections = {
+				{ section = "header" },
+				{ section = "keys", gap = 1, padding = 1 },
+				{ section = "startup" },
+				{
+					section = "terminal",
+					cmd = "chafa ~/Downloads/rb.png --format symbols --symbols vhalf --size 50x50",
+					pane = 2,
+					indent = 8,
+					height = 25,
+				},
+			},
+		},
 		debug = { enabled = false },
 		dim = { enabled = false },
 		git = { enabled = false },
