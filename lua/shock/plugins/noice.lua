@@ -15,6 +15,9 @@ return {
 				["vim.lsp.util.stylize_markdown"] = true,
 				["cmp.entry.get_documentation"] = true,
 			},
+			progress = {
+				enabled = false,
+			},
 		},
 		cmdline = {
 			view = "cmdline",
@@ -32,16 +35,8 @@ return {
 		},
 		presets = {
 			bottom_search = true,
-			long_message_to_split = true,
 			lsp_doc_border = true,
 			inc_rename = true,
-		},
-		views = {
-			mini = {
-				win_options = {
-					winblend = 0,
-				},
-			},
 		},
 	},
 }

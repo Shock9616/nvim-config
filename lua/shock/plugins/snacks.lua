@@ -16,7 +16,11 @@ return {
 		input = { enabled = false },
 		layout = { enabled = false },
 		lazygit = { enabled = false },
-		notifier = { enabled = false },
+		notifier = {
+			enabled = true,
+			style = "compact",
+			top_down = false,
+		},
 		picker = {},
 		profiler = { enabled = false },
 		quickfile = {},
