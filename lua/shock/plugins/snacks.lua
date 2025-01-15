@@ -7,8 +7,8 @@ return {
 		bufdelete = { enabled = false },
 		dashboard = { enabled = false },
 		debug = { enabled = false },
-		dim = {},
-		git = {},
+		dim = { enabled = false },
+		git = { enabled = false },
 		gitbrowse = { enabled = false },
 		indent = {
 			animate = { enabled = false },
@@ -21,14 +21,16 @@ return {
 		profiler = { enabled = false },
 		quickfile = {},
 		rename = { enabled = false },
-		scope = {},
+		scope = {
+			cursor = false,
+		},
 		scratch = { enabled = false },
 		scroll = { enabled = false },
-		statuscolumn = {},
+		statuscolumn = { enabled = false },
 		terminal = { enabled = false },
-		toggle = {},
-		words = {},
-		zen = {},
+		toggle = { enabled = false },
+		words = { enabled = false },
+		zen = { enabled = false },
 	},
 	keys = {
 		{
