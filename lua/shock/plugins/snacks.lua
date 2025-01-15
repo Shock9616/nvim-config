@@ -23,7 +23,7 @@ return {
 				{ section = "startup" },
 				{
 					section = "terminal",
-					cmd = "chafa ~/Downloads/rb.png --format symbols --symbols vhalf --size 50x50",
+					cmd = "chafa ~/.config/nvim/other/rb.png --format symbols --symbols vhalf --size 50x50",
 					pane = 2,
 					indent = 8,
 					height = 25,
