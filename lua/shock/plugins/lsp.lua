@@ -10,7 +10,7 @@ return {
 	dependencies = {
 		"neovim/nvim-lspconfig",
 		"hrsh7th/cmp-nvim-lsp",
-		"hrsh7th/nvim-cmp",
+		"iguanacucumber/magazine.nvim",
 		{ "williamboman/mason.nvim", config = true },
 		"williamboman/mason-lspconfig.nvim",
 		{ "folke/neodev.nvim", opts = {} },
