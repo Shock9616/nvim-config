@@ -1,3 +1,9 @@
+--
+-- mini-files.lua
+--
+-- Awesome file manager!
+--
+
 return {
 	"echasnovski/mini.files",
 	version = "*",

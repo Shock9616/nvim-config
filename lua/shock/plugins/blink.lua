@@ -1,3 +1,9 @@
+--
+-- blink.lua
+--
+-- Simple and fast autocomplete!
+--
+
 return {
 	"saghen/blink.cmp",
 	dependencies = {

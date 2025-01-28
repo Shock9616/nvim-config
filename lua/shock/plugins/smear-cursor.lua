@@ -1,3 +1,9 @@
+--
+-- smear-cursor.lua
+--
+-- Animated cursor for improved visual tracking
+--
+
 return {
 	"sphamba/smear-cursor.nvim",
 	opts = {

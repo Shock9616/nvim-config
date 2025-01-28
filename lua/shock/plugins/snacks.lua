@@ -1,3 +1,9 @@
+--
+-- snacks.lua
+--
+-- Better versions of plugins/QOL features
+--
+
 return {
 	"folke/snacks.nvim",
 	lazy = false,
