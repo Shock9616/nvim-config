@@ -9,8 +9,7 @@ return {
 	branch = "v4.x",
 	dependencies = {
 		"neovim/nvim-lspconfig",
-		"hrsh7th/cmp-nvim-lsp",
-		"iguanacucumber/magazine.nvim",
+		"saghen/blink.cmp",
 		{ "williamboman/mason.nvim", config = true },
 		"williamboman/mason-lspconfig.nvim",
 		{ "folke/neodev.nvim", opts = {} },
@@ -54,7 +53,8 @@ return {
 		lsp_zero.extend_lspconfig({
 			sign_text = true,
 			lsp_attach = lsp_attach,
-			capabilities = require("cmp_nvim_lsp").default_capabilities(),
+			-- capabilities = require("cmp_nvim_lsp").default_capabilities(),
+			capabilities = require("blink.cmp").get_lsp_capabilities(),
 		})
 
 		-- Setup Mason for LS installation
