@@ -71,7 +71,7 @@ return {
 				lualine_x = {
 					{
 						"diagnostics",
-						symbols = { error = " ", warn = " ", info = " ", hint = "" },
+						symbols = { error = " ", warn = " ", info = " ", hint = " " },
 						update_in_insert = true,
 					},
 				},
