@@ -10,8 +10,8 @@ return {
 	opts = {
 		mappings = {
 			close = "<ESC>",
-			go_in = "<CR>",
-			go_in_plus = "<S-CR>",
+			go_in = "<S-CR>",
+			go_in_plus = "<CR>",
 			go_out = "-",
 			go_out_plus = "_",
 		},
