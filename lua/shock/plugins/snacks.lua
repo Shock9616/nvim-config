@@ -11,24 +11,7 @@ return {
 		animate = { enabled = false },
 		bigfile = {},
 		bufdelete = { enabled = false },
-		dashboard = {
-			preset = {
-				header = [[
- ___   __       ______       ______       __   __      ________      ___ __ __     
-/__/\ /__/\    /_____/\     /_____/\     /_/\ /_/\    /_______/\    /__//_//_/\    
-\::\_\\  \ \   \::::_\/_    \:::_ \ \    \:\ \\ \ \   \__.::._\/    \::\| \| \ \   
- \:. `-\  \ \   \:\/___/\    \:\ \ \ \    \:\ \\ \ \     \::\ \      \:.      \ \  
-  \:. _    \ \   \::___\/_    \:\ \ \ \    \:\_/.:\ \    _\::\ \__    \:.\-/\  \ \ 
-   \. \`-\  \ \   \:\____/\    \:\_\ \ \    \ ..::/ /   /__\::\__/\    \. \  \  \ \
-    \__\/ \__\/    \_____\/     \_____\/     \___/_(    \________\/     \__\/ \__\/
-]],
-			},
-			sections = {
-				{ section = "header" },
-				{ section = "keys", gap = 1, padding = 1 },
-				{ section = "startup" },
-			},
-		},
+		dashboard = { enabled = false },
 		debug = { enabled = false },
 		dim = { enabled = false },
 		git = { enabled = false },
