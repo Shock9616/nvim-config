@@ -22,6 +22,7 @@ return {
 		wk.add({
 			{ "<leader>b", desc = "+[B]uffer" },
 			{ "<leader>f", desc = "+[F]ile" },
+			{ "<leader>g", desc = "+[G]it" },
 			{ "<leader>l", desc = "+[L]SP" },
 			{ "<leader>w", desc = "+[W]indow" },
 			{ "<leader>d", desc = "+[D]ebug" },

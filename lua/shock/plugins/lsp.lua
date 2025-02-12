@@ -91,6 +91,11 @@ return {
 								completion = {
 									callSnippet = "Replace",
 								},
+								workspace = {
+									library = {
+										"${3rd}/love2d/library",
+									},
+								},
 								diagnostics = { disable = { "missing-fields" } },
 							},
 						},
