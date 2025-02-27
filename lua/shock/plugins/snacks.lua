@@ -16,6 +16,12 @@ return {
 		dim = { enabled = false },
 		git = { enabled = false },
 		gitbrowse = { enabled = false },
+		image = {
+			doc = {
+				enabled = true,
+				inline = true,
+			},
+		},
 		indent = {
 			animate = { enabled = false },
 		},
