@@ -59,7 +59,6 @@ vim.keymap.set("n", "<leader>fn", "<cmd>enew<cr>", { desc = "[N]ew [F]ile" })
 vim.keymap.set("n", "<leader>bf", vim.lsp.buf.format, { desc = "[F]ormat Buffer" })
 vim.keymap.set("n", "<leader>bd", "<cmd>bd<cr>", { desc = "[D]elete Buffer" })
 vim.keymap.set("n", "<leader>ba", "ggVG", { desc = "Select [A]ll" })
-vim.keymap.set("n", "<leader>bc", "zz", { desc = "[C]enter current line" })
 
 -- Window
 vim.keymap.set("n", "<leader>w-", "<cmd>split<cr>", { desc = "Horizontal Split" })
