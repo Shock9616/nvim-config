@@ -23,7 +23,7 @@ return {
 				"query",
 				"python",
 				"markdown",
-				-- "latex",
+				"latex",
 				"c",
 			},
 			auto_install = true,

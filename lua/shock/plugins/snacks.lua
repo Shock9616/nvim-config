@@ -19,7 +19,7 @@ return {
 		image = {
 			doc = {
 				enabled = true,
-				inline = true,
+				inline = false,
 			},
 		},
 		indent = {

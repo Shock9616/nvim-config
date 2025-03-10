@@ -18,9 +18,9 @@ return {
 				auto_show_delay_ms = 0,
 				window = { border = "single" },
 			},
-			ghost_text = {
-				enabled = true,
-			},
+			-- ghost_text = {
+			-- 	enabled = true,
+			-- },
 		},
 		cmdline = {
 			enabled = true,
