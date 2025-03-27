@@ -12,7 +12,7 @@ return {
 			opts = {
 				windows = {
 					terminal = {
-						powition = "right",
+						position = "right",
 					},
 				},
 			},
