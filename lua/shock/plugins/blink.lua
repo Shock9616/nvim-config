@@ -8,9 +8,20 @@ return {
 	"saghen/blink.cmp",
 	dependencies = {
 		"rafamadriz/friendly-snippets",
+		"folke/lazydev.nvim",
 	},
 	version = "*",
 	opts = {
+		sources = {
+			default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+			providers = {
+				lazydev = {
+					name = "LazyDev",
+					module = "lazydev.integrations.blink",
+					score_offset = 100,
+				},
+			},
+		},
 		completion = {
 			menu = { border = "single" },
 			documentation = {
@@ -18,9 +29,6 @@ return {
 				auto_show_delay_ms = 0,
 				window = { border = "single" },
 			},
-			-- ghost_text = {
-			-- 	enabled = true,
-			-- },
 		},
 		cmdline = {
 			enabled = true,
