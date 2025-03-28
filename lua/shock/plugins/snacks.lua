@@ -7,15 +7,9 @@
 return {
 	"folke/snacks.nvim",
 	lazy = false,
+	priority = 1000,
 	opts = {
-		animate = { enabled = false },
 		bigfile = {},
-		bufdelete = { enabled = false },
-		dashboard = { enabled = false },
-		debug = { enabled = false },
-		dim = { enabled = false },
-		git = { enabled = false },
-		gitbrowse = { enabled = false },
 		image = {
 			doc = {
 				enabled = true,
@@ -25,28 +19,16 @@ return {
 		indent = {
 			animate = { enabled = false },
 		},
-		input = { enabled = false },
-		layout = { enabled = false },
-		lazygit = { enabled = false },
 		notifier = {
 			enabled = true,
 			style = "compact",
 			top_down = false,
 		},
 		picker = {},
-		profiler = { enabled = false },
 		quickfile = {},
-		rename = { enabled = false },
 		scope = {
 			cursor = false,
 		},
-		scratch = { enabled = false },
-		scroll = { enabled = false },
-		statuscolumn = { enabled = false },
-		terminal = { enabled = false },
-		toggle = { enabled = false },
-		words = { enabled = false },
-		zen = { enabled = false },
 	},
 	keys = {
 		{
