@@ -27,6 +27,20 @@ return {
 	},
 	config = function()
 		local dap = require("dap")
+		local dv = require("dap-view")
+
+		dap.listeners.before.attach["dap-view-config"] = function()
+			dv.open()
+		end
+		dap.listeners.before.launch["dap-view-config"] = function()
+			dv.open()
+		end
+		dap.listeners.before.event_terminated["dap-view-config"] = function()
+			dv.close()
+		end
+		dap.listeners.before.event_exited["dap-view-config"] = function()
+			dv.close()
+		end
 
 		-- C/C++
 		dap.adapters.codelldb = {
@@ -39,6 +53,7 @@ return {
 				name = "Launch file",
 				type = "codelldb",
 				request = "launch",
+				expressions = "native",
 				program = function()
 					return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
 				end,
