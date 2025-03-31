@@ -62,6 +62,20 @@ return {
 			},
 		}
 
+		dap.configurations.cpp = {
+			{
+				name = "Launch file",
+				type = "codelldb",
+				request = "launch",
+				expressions = "native",
+				program = function()
+					return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+				end,
+				cwd = "${workspaceFolder}",
+				stopOnEntry = false,
+			},
+		}
+
 		-- Configure Keymaps
 		vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>", { desc = "Toggle [B]reakpoint" })
 		vim.keymap.set("n", "<leader>dc", "<cmd>DapContinue<cr>", { desc = "[D]AP [C]ontinue" })
@@ -69,5 +83,8 @@ return {
 		vim.keymap.set("n", "<F9>", "<cmd>DapStepOver<cr>", { desc = "Step Over" })
 		vim.keymap.set("n", "<F8>", "<cmd>DapStepInto<cr>", { desc = "Step Into" })
 		vim.keymap.set("n", "<F7>", "<cmd>DapStepOut<cr>", { desc = "Step Out" })
+
+		-- Configure custom icons
+		vim.fn.sign_define("DapBreakpoint", { text = "󰧟", texthl = "LspDiagnosticsError" })
 	end,
 }
