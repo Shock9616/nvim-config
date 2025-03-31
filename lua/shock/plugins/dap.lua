@@ -79,6 +79,7 @@ return {
 		-- Configure Keymaps
 		vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>", { desc = "Toggle [B]reakpoint" })
 		vim.keymap.set("n", "<leader>dc", "<cmd>DapContinue<cr>", { desc = "[D]AP [C]ontinue" })
+		vim.keymap.set("n", "<leader>dn", "<cmd>DapNew<cr>", { desc = "[D]AP [N]ew" })
 		vim.keymap.set("n", "<leader>dw", "<cmd>DapViewWatch<cr>", { desc = "[D]AP [W]atch" })
 		vim.keymap.set("n", "<F9>", "<cmd>DapStepOver<cr>", { desc = "Step Over" })
 		vim.keymap.set("n", "<F8>", "<cmd>DapStepInto<cr>", { desc = "Step Into" })
