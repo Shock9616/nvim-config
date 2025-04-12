@@ -24,7 +24,12 @@ return {
 			style = "compact",
 			top_down = false,
 		},
-		picker = {},
+		picker = {
+			exclude = {
+				"venv/",
+				"__pycache__",
+			},
+		},
 		quickfile = {},
 		scope = {
 			cursor = false,
