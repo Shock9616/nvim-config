@@ -69,6 +69,16 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	end,
 })
 
+-- Bring back file written notifications
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+	callback = function(_)
+		local file = vim.fn.expand("%:~")
+		local lines = vim.fn.line("$")
+		local size = vim.fn.wordcount().bytes
+		vim.notify('"' .. file .. '" ' .. lines .. "L, " .. size .. "B", vim.log.levels.INFO, {})
+	end,
+})
+
 -- LSP Progress notification using Snacks.notifier
 ---@type table<number, {token:lsp.ProgressToken, msg:string, done:boolean}[]>
 local progress = vim.defaulttable()
