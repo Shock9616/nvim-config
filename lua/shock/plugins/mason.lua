@@ -28,7 +28,6 @@ return {
 		ensure_installed = {
 			-- Python
 			"basedpyright",
-			"ruff",
 
 			-- C/C++
 			"clangd",

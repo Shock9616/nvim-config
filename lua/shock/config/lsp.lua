@@ -44,13 +44,6 @@ vim.lsp.config["basedpyright"] = {
 	},
 }
 
-vim.lsp.config["ruff"] = {
-	cmd = { "ruff", "server" },
-	filetypes = { "python" },
-	settings = {},
-	single_file_support = true,
-}
-
 -- C/C++
 vim.lsp.config["clangd"] = {
 	cmd = { "clangd" },
@@ -74,7 +67,7 @@ vim.lsp.config["marksman"] = {
 }
 
 -- Enable Language Servers
-vim.lsp.enable({ "luals", "basedpyright", "ruff", "clangd", "marksman" })
+vim.lsp.enable({ "luals", "basedpyright", "clangd", "marksman" })
 
 -- Setup custom diagnostics signs
 vim.diagnostic.config({
