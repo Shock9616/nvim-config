@@ -114,3 +114,53 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 	end,
 })
+
+-- Create LspStart and LspStop commands
+vim.api.nvim_create_user_command("LspStart", function(opts)
+	local name = opts.args
+	local config = vim.lsp.config._configs[name]
+
+	if not config then
+		vim.notify("No configuration found for LSP server: " .. name, vim.log.levels.ERROR)
+		return
+	end
+
+	vim.lsp.start(config)
+end, {
+	nargs = 1,
+	complete = function()
+		local items = {}
+		for name, config in pairs(vim.lsp.config._configs) do
+			if type(config) == "table" and name ~= "*" then
+				table.insert(items, name)
+			end
+		end
+		return items
+	end,
+})
+
+vim.api.nvim_create_user_command("LspStop", function(opts)
+	local name = opts.args
+	if not name or name == "" then
+		vim.notify("Please provide a server name", vim.log.levels.ERROR)
+		return
+	end
+
+	for _, client in pairs(vim.lsp.get_clients()) do
+		if client.name == name then
+			client:stop()
+			return
+		end
+	end
+
+	vim.notify("No active LSP client found with name: " .. name, vim.log.levels.ERROR)
+end, {
+	nargs = 1,
+	complete = function(_, _, _)
+		local names = {}
+		for _, client in pairs(vim.lsp.get_clients()) do
+			table.insert(names, client.name)
+		end
+		return names
+	end,
+})
