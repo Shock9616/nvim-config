@@ -76,3 +76,7 @@ vim.keymap.set("n", "<leader>li", "<cmd>LspInfo<cr>", { desc = "Buffer Lsp [I]nf
 vim.keymap.set("n", "d]", vim.diagnostic.goto_next, { desc = "Goto next diagnostic" })
 vim.keymap.set("n", "d[", vim.diagnostic.goto_prev, { desc = "Goto previous diagnostic" })
 vim.keymap.set("n", "dk", vim.diagnostic.open_float, { desc = "Show current diagnostic" })
+
+-- Quickfix
+vim.keymap.set("n", "<M-j>", "<cmd>cnext<cr>", { desc = "Quickfix Next" })
+vim.keymap.set("n", "<M-k>", "<cmd>cprev<cr>", { desc = "Quickfix Previous" })
