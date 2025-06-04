@@ -8,6 +8,16 @@
 vim.lsp.config["luals"] = {
 	cmd = { "lua-language-server" },
 	filetypes = { "lua" },
+	root_markers = {
+		".luarc.json",
+		".luarc.jsonc",
+		".luacheckrc",
+		".stylua.toml",
+		"stylua.toml",
+		"selene.toml",
+		"selene.yml",
+		".git",
+	},
 	settings = {
 		Lua = {
 			runtime = {
@@ -33,6 +43,15 @@ vim.lsp.config["luals"] = {
 vim.lsp.config["basedpyright"] = {
 	cmd = { "basedpyright-langserver", "--stdio" },
 	filetypes = { "python" },
+	root_markers = {
+		"pyproject.toml",
+		"setup.py",
+		"setup.cfg",
+		"requirements.txt",
+		"Pipfile",
+		"pyrightconfig.json",
+		".git",
+	},
 	settings = {
 		basedpyright = {
 			analysis = {
@@ -48,6 +67,15 @@ vim.lsp.config["basedpyright"] = {
 vim.lsp.config["clangd"] = {
 	cmd = { "clangd" },
 	filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+	root_markers = {
+		".clangd",
+		".clang-tidy",
+		".clang-format",
+		"compile_commands.json",
+		"compile_flags.txt",
+		"configure.ac",
+		".git",
+	},
 	capabilities = {
 		offsetEncoding = { "utf-8", "utf-16" },
 		textDocument = {
@@ -63,6 +91,7 @@ vim.lsp.config["clangd"] = {
 vim.lsp.config["marksman"] = {
 	cmd = { "marksman", "server" },
 	filetypes = { "markdown", "markdown.mdx" },
+	root_markers = { ".marksman.toml", ".git" },
 	single_file_support = true,
 }
 
@@ -118,6 +147,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 -- Create LspStart and LspStop commands
 vim.api.nvim_create_user_command("LspStart", function(opts)
 	local name = opts.args
+	---@diagnostic disable-next-line:invisible
 	local config = vim.lsp.config._configs[name]
 
 	if not config then
@@ -130,6 +160,7 @@ end, {
 	nargs = 1,
 	complete = function()
 		local items = {}
+		---@diagnostic disable-next-line:invisible
 		for name, config in pairs(vim.lsp.config._configs) do
 			if type(config) == "table" and name ~= "*" then
 				table.insert(items, name)
@@ -164,3 +195,5 @@ end, {
 		return names
 	end,
 })
+
+vim.api.nvim_create_user_command("LspInfo", ":checkhealth vim.lsp", { desc = "Alias to `:checkhealth vim.lsp`" })
