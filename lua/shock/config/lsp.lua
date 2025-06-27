@@ -87,6 +87,32 @@ vim.lsp.config["clangd"] = {
 	single_file_support = true,
 }
 
+-- Swift
+vim.lsp.config["sourcekit"] = {
+	cmd = { "sourcekit-lsp" },
+	filetypes = { "swift", "objc", "objcpp", "c", "cpp" },
+	root_markers = {
+		"*.xcodeproj",
+		"*.xcworkspace",
+		".swift-format",
+		"buildServer.json",
+		".git",
+	},
+	capabilities = {
+		textDocument = {
+			diagnostic = {
+				dynamicRegistration = true,
+				relatedDocumentSupport = true,
+			},
+		},
+		workspace = {
+			didChangeWatchedFiles = {
+				dynamicRegistration = true,
+			},
+		},
+	},
+}
+
 -- Markdown
 vim.lsp.config["marksman"] = {
 	cmd = { "marksman", "server" },
@@ -96,7 +122,7 @@ vim.lsp.config["marksman"] = {
 }
 
 -- Enable Language Servers
-vim.lsp.enable({ "luals", "basedpyright", "clangd", "marksman" })
+vim.lsp.enable({ "luals", "basedpyright", "clangd", "sourcekit", "marksman" })
 
 -- Setup custom diagnostics signs
 vim.diagnostic.config({
