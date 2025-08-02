@@ -46,7 +46,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- Open config
 vim.keymap.set("n", "<leader>C", function()
-	vim.cmd("e " .. vim.fn.stdpath("config") .. "/init.lua")
+    vim.cmd("e " .. vim.fn.stdpath("config") .. "/init.lua")
 end, { desc = "Edit [C]onfig" })
 
 -- Replace selected text in buffer
@@ -73,8 +73,8 @@ vim.keymap.set("n", "<leader>wq", "<cmd>wq<cr>", { desc = "Save and Close Window
 vim.keymap.set("n", "<leader>li", "<cmd>LspInfo<cr>", { desc = "Buffer Lsp [I]nfo" })
 
 -- Diagnostics
-vim.keymap.set("n", "d]", vim.diagnostic.goto_next, { desc = "Goto next diagnostic" })
-vim.keymap.set("n", "d[", vim.diagnostic.goto_prev, { desc = "Goto previous diagnostic" })
+vim.keymap.set("n", "d]", vim.diagnostic.get_next, { desc = "Goto next diagnostic" })
+vim.keymap.set("n", "d[", vim.diagnostic.get_prev, { desc = "Goto previous diagnostic" })
 vim.keymap.set("n", "dk", vim.diagnostic.open_float, { desc = "Show current diagnostic" })
 
 -- Quickfix
