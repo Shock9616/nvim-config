@@ -134,8 +134,21 @@ vim.lsp.config["hls"] = {
     },
 }
 
+-- Rust
+vim.lsp.config["rust_analyzer"] = {
+    cmd = { "rust-analyzer" },
+    filetypes = { "rust" },
+    root_markers = { "Cargo.toml" },
+    capabilities = {
+        experimental = {
+            serverStatusNotification = true
+        },
+    },
+    single_file_support = true,
+}
+
 -- Enable Language Servers
-vim.lsp.enable({ "luals", "basedpyright", "clangd", "sourcekit", "marksman", "hls" })
+vim.lsp.enable({ "luals", "basedpyright", "clangd", "sourcekit", "marksman", "hls", "rust_analyzer" })
 
 -- Setup custom diagnostics signs
 vim.diagnostic.config({
