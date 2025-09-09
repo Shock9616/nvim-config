@@ -80,3 +80,29 @@ vim.keymap.set("n", "dk", vim.diagnostic.open_float, { desc = "Show current diag
 -- Quickfix
 vim.keymap.set("n", "<M-j>", "<cmd>cnext<cr>", { desc = "Quickfix Next" })
 vim.keymap.set("n", "<M-k>", "<cmd>cprev<cr>", { desc = "Quickfix Previous" })
+
+-- Append todo comment to line
+vim.keymap.set("n", "gtc", function()
+    local line = vim.api.nvim_get_current_line()
+    local cs = vim.bo.commentstring
+
+    if not cs or cs == "" then
+        cs = "// %s" -- fallback
+    end
+
+    local todo_comment = cs:gsub("%%s", "TODO: ")
+
+    local new_line = line .. "  " .. todo_comment
+    vim.api.nvim_set_current_line(new_line)
+
+    local row = vim.api.nvim_win_get_cursor(0)[1]
+    local col_offset = string.find(new_line, "TODO:", 1, true) + #"TODO:"
+    vim.api.nvim_win_set_cursor(0, { row, col_offset })
+
+    if cs:match("<!--") then
+        -- HTML-style comments need i rather than a for correct cursor placement
+        vim.api.nvim_feedkeys("i", "n", false)
+    else
+        vim.api.nvim_feedkeys("a", "n", false)
+    end
+end, { desc = "Append todo comment" })
