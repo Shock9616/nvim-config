@@ -184,6 +184,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         vim.keymap.set("n", "<leader>lD", function()
             Snacks.picker.lsp_type_definitions()
         end, { desc = "Type [D]efinitions" })
+        vim.keymap.set("n", "<leader>lc", vim.lsp.codelens.run, { desc = "Run [C]odelens" })
         if vim.lsp.get_client_by_id(ev.data.client_id).server_capabilities.inlayHintProvider then
             vim.keymap.set("n", "<leader>lh", function()
                 if vim.lsp.inlay_hint.is_enabled() then
