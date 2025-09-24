@@ -42,6 +42,10 @@ return {
             FloatTitle = {
                 bg = colors.base,
             },
+            RenderMarkdownInlineHighlight = {
+                bg = colors.yellow,
+                fg = colors.mantle
+            }
         }
 
         for hl, color in pairs(HlGroups) do
