@@ -10,6 +10,7 @@ return {
     build = "cargo install rustowl",
     lazy = false,
     opts = {
+        highlight_style = "underline",
         client = {
             on_attach = function(_, buffer)
                 vim.keymap.set("n", "<leader>ro", function()
