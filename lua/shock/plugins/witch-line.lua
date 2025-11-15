@@ -26,9 +26,6 @@ return {
         }
 
         require("witch-line").setup({
-            abstract = {
-                style = { bg = colors.mantle }
-            },
             components = {
                 -- Mode
                 {

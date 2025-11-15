@@ -55,7 +55,7 @@ vim.opt.grepprg = "rg --vimgrep"
 vim.opt.splitbelow = true -- Horizontal split below current window
 vim.opt.splitright = true -- Vertical split right of current window
 
-vim.opt.laststatus = 0
+vim.opt.laststatus = 3
 vim.opt.list = false
 vim.opt.spelllang = { "en" }
 
