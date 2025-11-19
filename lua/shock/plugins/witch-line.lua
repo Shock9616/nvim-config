@@ -136,9 +136,22 @@ return {
                         left_style = { fg = colors.surface0, bg = colors.base }
                     },
                     {
-                        [0] = "lsp.clients",
+                        id = "lsp_clients",
+                        events = { "LspAttach", "LspDetach", "BufWritePost" },
                         style = { fg = colors.text, bg = colors.surface0 },
                         padding = { left = 0, right = 1 },
+                        update = function()
+                            local clients = vim.lsp.get_clients()
+                            if next(clients) == nil then
+                                return ""
+                            end
+
+                            local c = {}
+                            for _, client in pairs(clients) do
+                                table.insert(c, client.name)
+                            end
+                            return table.concat(c, " | ")
+                        end
                     },
                     {
                         id = "right_end",
