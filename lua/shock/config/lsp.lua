@@ -90,7 +90,7 @@ vim.lsp.config["clangd"] = {
 -- Swift
 vim.lsp.config["sourcekit"] = {
     cmd = { "sourcekit-lsp" },
-    filetypes = { "swift", "objc", "objcpp", "c", "cpp" },
+    filetypes = { "swift", "objc" },
     root_markers = {
         "*.xcodeproj",
         "*.xcworkspace",
