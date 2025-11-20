@@ -1,5 +1,7 @@
 # Neovim Config
 
+![Screenshot of my config](https://cdn.corenexis.com/files/b/8689572168.png)
+
 This is my personal Neovim config. I primarily use it for note taking in
 markdown and programming course work at university, so configured language
 support changes/expands pretty frequently
