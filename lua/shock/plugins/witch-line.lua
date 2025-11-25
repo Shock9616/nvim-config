@@ -6,7 +6,6 @@
 
 return {
     "sontungexpt/witch-line",
-    -- enabled = false,
     dependencies = {
         "nvim-tree/nvim-web-devicons",
         "catppuccin/nvim",
@@ -166,6 +165,9 @@ return {
                         left_style = { fg = colors.surface2, bg = colors.surface0 }
                     }
                 }
+            },
+            cache = {
+                enabled = false,
             }
         })
     end
