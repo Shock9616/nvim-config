@@ -32,3 +32,36 @@ support changes/expands pretty frequently
 | [ultimate-autopair.nvim](https://github.com/altermo/ultimate-autopair.nvim)          | Autopair surrounding characters (`()`, `""`, etc.)                    | [ultimate-autopair.lua](https://github.com/Shock9616/nvim-config/blob/main/lua/shock/plugins/ultimate-autopair.lua) |
 | [vim-table-mode](https://github.com/dhruvasagar/vim-table-mode)                      | Auto format tables in markdown                                        | [vim-table-mode.lua](https://github.com/Shock9616/nvim-config/blob/main/lua/shock/plugins/vim-table-mode.lua)       |
 | [witch-line](https://github.com/sontungexpt/witch-line)                              | Statusline                                                            | [witch-line.lua](https://github.com/Shock9616/nvim-config/blob/main/lua/shock/plugins/witch-line.lua)               |
+
+## Dependencies
+
+- Install via system package manager
+
+- **LSP**:
+  - luals (lua)
+  - basedpyright (python)
+  - clangd (c/c++)
+  - sourcekit (swift)
+  - marksman (markdown)
+  - hls (haskell)
+  - rust-analyzer (rust)
+- **DAP**:
+  - lldb (c/c++)
+- **Formatters**:
+  - stylua (lua)
+  - ruff_format (python)
+  - ruff_fix (python)
+  - ruff_organize_imports (python)
+  - rustfmt (rust)
+  - clang_format (c/c++/java)
+  - jq (json)
+  - deno_fmt (markdown)
+  - cbfmt (markdown)
+  - prettier (html/css/js)
+- **Other**:
+  - curl
+  - git
+  - tree-sitter
+  - node
+  - ripgrep
+  - rd
