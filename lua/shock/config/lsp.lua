@@ -147,8 +147,18 @@ vim.lsp.config["rust_analyzer"] = {
 	single_file_support = true,
 }
 
+-- Java
+vim.lsp.config["jdtls"] = {
+	cmd = { "jdtls" },
+	filetypes = { "java" },
+	root_markers = {
+		{ "mvnw", "gradlew", "settings.gradle", "settings.gradle.kts", ".git" },
+		{ "build.xml", "pom.xml", "build.gradle", "build.gradle.kts" },
+	},
+}
+
 -- Enable Language Servers
-vim.lsp.enable({ "luals", "basedpyright", "clangd", "sourcekit", "marksman", "hls", "rust_analyzer" })
+vim.lsp.enable({ "luals", "basedpyright", "clangd", "sourcekit", "marksman", "hls", "rust_analyzer", "jdtls" })
 
 -- Setup custom diagnostics signs
 vim.diagnostic.config({
