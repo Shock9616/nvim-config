@@ -16,7 +16,7 @@ return {
 			cpp = { "clang_format" },
 			java = { "clang_format" },
 			json = { "jq" },
-			markdown = { "deno_fmt", "cbfmt" },
+			markdown = { "deno_fmt", "injected" },
 			html = { "prettier" },
 			css = { "prettier" },
 			javascript = { "prettier" },
