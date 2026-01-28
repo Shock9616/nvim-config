@@ -7,6 +7,7 @@
 return {
 	"saghen/blink.cmp",
 	dependencies = {
+		"echasnovski/mini.snippets",
 		"rafamadriz/friendly-snippets",
 		"folke/lazydev.nvim",
 	},
@@ -29,6 +30,9 @@ return {
 				auto_show_delay_ms = 0,
 				window = { border = "single" },
 			},
+		},
+		snippets = {
+			preset = "mini_snippets",
 		},
 		cmdline = {
 			enabled = true,

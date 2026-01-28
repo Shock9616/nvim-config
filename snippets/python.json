@@ -1,0 +1,6 @@
+{
+    "Main": {
+        "prefix": "__main__",
+        "body": "if __name__ == \"__main__\":\n    $0"
+    }
+}
