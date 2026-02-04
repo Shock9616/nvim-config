@@ -157,8 +157,24 @@ vim.lsp.config["jdtls"] = {
 	},
 }
 
+-- Typst
+vim.lsp.config["tinymist"] = {
+	cmd = { "tinymist" },
+	filetypes = { "typst" },
+}
+
 -- Enable Language Servers
-vim.lsp.enable({ "luals", "basedpyright", "clangd", "sourcekit", "marksman", "hls", "rust_analyzer", "jdtls" })
+vim.lsp.enable({
+	"luals",
+	"basedpyright",
+	"clangd",
+	"sourcekit",
+	"marksman",
+	"hls",
+	"rust_analyzer",
+	"jdtls",
+	"tinymist",
+})
 
 -- Setup custom diagnostics signs
 vim.diagnostic.config({
