@@ -1,6 +1,6 @@
 # Neovim Config
 
-![Screenshot of my config](https://cdn.corenexis.com/files/b/8689572168.png)
+<img width="720" height="514" alt="A screenshot of my config editing a file from MacProBot" src="https://github.com/user-attachments/assets/051300f9-82f6-41e2-a78e-97c486a55983" />
 
 This is my personal Neovim config. I primarily use it for note taking in
 markdown and programming course work at university, so configured language
