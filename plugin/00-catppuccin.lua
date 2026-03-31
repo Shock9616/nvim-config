@@ -44,6 +44,21 @@ local HlGroups = {
 		bg = colors.yellow,
 		fg = colors.mantle,
 	},
+	MiniPickPrompt = {
+		bg = colors.base,
+	},
+	MiniPickPromptCaret = {
+		fg = colors.rosewater,
+		bg = colors.base,
+	},
+	MiniPickPromptPrefix = {
+		fg = colors.peach,
+		bg = colors.base,
+	},
+	MiniPickBorderText = {
+		fg = colors.mauve,
+		bg = colors.base,
+	},
 }
 
 for hl, color in pairs(HlGroups) do
