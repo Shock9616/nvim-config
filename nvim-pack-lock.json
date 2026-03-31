@@ -16,6 +16,10 @@
       "rev": "50c205548d8b037b7ff6378fca6d21146f0b6161",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
+    "markdown-preview.nvim": {
+      "rev": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee",
+      "src": "https://github.com/iamcco/markdown-preview.nvim"
+    },
     "mini.nvim": {
       "rev": "af5f75c9ce572a4d1f0c77d6fb4ea764d16c1b3c",
       "src": "https://github.com/nvim-mini/mini.nvim"
