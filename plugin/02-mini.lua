@@ -35,6 +35,12 @@ vim.keymap.set("n", "<leader>fd", function() MiniExtra.pickers.diagnostic() end)
 vim.keymap.set("n", "<leader>fb", function() MiniPick.builtin.buffers() end)
 vim.keymap.set("n", "<leader>fh", function() MiniPick.builtin.help() end)
 
+vim.keymap.set("n", "gd", function() MiniExtra.pickers.lsp({ scope = "definition" }) end)
+vim.keymap.set("n", "gi", function() MiniExtra.pickers.lsp({ scope = "implementation" }) end)
+vim.keymap.set("n", "gr", function() MiniExtra.pickers.lsp({ scope = "references" }) end)
+vim.keymap.set("n", "gD", function() MiniExtra.pickers.lsp({ scope = "type_definition" }) end)
+vim.keymap.set("n", "gs", function() MiniExtra.pickers.lsp({ scope = "document_symbol" }) end)
+
 -- mini.snippets
 local gen_loader = require("mini.snippets").gen_loader
 
