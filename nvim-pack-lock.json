@@ -56,6 +56,10 @@
       "rev": "bd67efe408d4816e25e8491cc5ad4088e708a69a",
       "src": "https://github.com/folke/trouble.nvim"
     },
+    "vim-table-mode": {
+      "rev": "bb025308a45c67c7c8f0763ba37bc2ee3f534df0",
+      "src": "https://github.com/dhruvasagar/vim-table-mode"
+    },
     "witch-line": {
       "rev": "929a5e9f7ff05bf412507a79c285955ad9e54c3f",
       "src": "https://github.com/sontungexpt/witch-line"
