@@ -125,7 +125,7 @@ vim.lsp.config["sourcekit"] = {
 -- Markdown
 vim.lsp.config["marksman"] = {
 	cmd = { "marksman", "server" },
-	filetypes = { "markdown", "markdown.mdx" },
+	filetypes = { "markdown" },
 	root_markers = { ".marksman.toml", ".git" },
 	single_file_support = true,
 }
