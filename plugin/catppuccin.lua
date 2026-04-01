@@ -59,6 +59,9 @@ local HlGroups = {
 		fg = colors.mauve,
 		bg = colors.base,
 	},
+	MiniFilesTitleFocused = {
+		bg = colors.base,
+	},
 }
 
 for hl, color in pairs(HlGroups) do
