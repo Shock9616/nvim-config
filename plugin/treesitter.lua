@@ -22,32 +22,27 @@ vim.pack.add({
 	"https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
 })
 
-require("nvim-treesitter").setup({
-	highlight = { enable = true },
-	indent = {
-		enable = true,
-	},
-	ensure_installed = {
-		"lua",
-		"vim",
-		"vimdoc",
-		"regex",
-		"query",
-		"python",
-		"markdown",
-		"latex",
-		"c",
-	},
-	auto_install = true,
-	incremental_selection = {
-		enable = true,
-		keymaps = {
-			init_selection = "<M-space>",
-			node_incremental = "<M-space>",
-			scope_incremental = false,
-			node_decremental = "<bs>",
-		},
-	},
+require("nvim-treesitter").install({
+	"lua",
+	"vim",
+	"vimdoc",
+	"regex",
+	"query",
+	"python",
+	"markdown",
+	"latex",
+	"c",
+})
+
+-- Automatically install (if not already installed) and enable the treesitter
+-- parser for the language of the current buffer
+vim.api.nvim_create_autocmd("FileType", {
+	callback = function(args)
+		local lang = vim.treesitter.language.get_lang(args.match)
+		if lang and vim.treesitter.language.add(lang) then
+			vim.treesitter.start()
+		end
+	end,
 })
 
 require("nvim-treesitter-textobjects").setup({
