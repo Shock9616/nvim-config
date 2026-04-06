@@ -76,3 +76,6 @@ vim.g.loaded_netrw = 1
 
 -- Set fallback default colourscheme
 vim.cmd("colorscheme catppuccin")
+
+-- Enable new ui features
+require("vim._core.ui2").enable({})
