@@ -7,6 +7,7 @@
 vim.pack.add({ "https://github.com/catppuccin/nvim" })
 
 local flavour = "macchiato"
+local colors = require("catppuccin.palettes").get_palette(flavour)
 
 require("catppuccin").setup({
 	flavour = flavour,
@@ -15,6 +16,38 @@ require("catppuccin").setup({
 		cmp = true,
 		gitsigns = true,
 		indent_blankline = { enabled = false },
+		lualine = {
+			macchiato = {
+				normal = {
+					b = { fg = colors.text },
+					c = { fg = colors.overlay1 },
+				},
+				insert = {
+					b = { fg = colors.text },
+					c = { fg = colors.overlay1 },
+				},
+				terminal = {
+					b = { fg = colors.text },
+					c = { fg = colors.overlay1 },
+				},
+				command = {
+					b = { fg = colors.text },
+					c = { fg = colors.overlay1 },
+				},
+				visual = {
+					b = { fg = colors.text },
+					c = { fg = colors.overlay1 },
+				},
+				replace = {
+					b = { fg = colors.text },
+					c = { fg = colors.overlay1 },
+				},
+				inactive = {
+					b = { fg = colors.text },
+					c = { fg = colors.overlay1 },
+				},
+			},
+		},
 		mason = true,
 		treesitter = true,
 		which_key = true,
@@ -28,7 +61,6 @@ require("catppuccin").setup({
 vim.cmd.colorscheme("catppuccin")
 
 -- Customize global highlight groups
-local colors = require("catppuccin.palettes").get_palette(flavour)
 
 local HlGroups = {
 	FloatBorder = {
