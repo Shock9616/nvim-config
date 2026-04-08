@@ -29,7 +29,7 @@ vim.lsp.config["luals"] = {
 			workspace = {
 				library = {
 					vim.env.VIMRUNTIME,
-					"${3rd}/love2d/library",
+					vim.fn.stdpath("config"),
 				},
 			},
 			diagnostics = {
