@@ -33,7 +33,7 @@ require("lualine").setup({
 	},
 	sections = {
 		lualine_a = { { short_mode, padding = { left = 1, right = 0 } } },
-		lualine_b = { { "filetype", icon_only = true, padding = { left = 1, right = 0 } }, "filename" },
+		lualine_b = { { "filetype", icon_only = true, padding = { left = 1, right = 0 } }, { "filename", path = 4 } },
 		lualine_c = {
 			{ "branch", icon = "" },
 			{ "diff", symbols = { added = " ", modified = " ", removed = " " }, colored = false },
