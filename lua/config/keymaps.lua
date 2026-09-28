@@ -44,6 +44,12 @@ vim.keymap.set("n", "G", "Gzz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Diable arrow keys
+vim.keymap.set("", "<up>", "<nop>", { noremap = true })
+vim.keymap.set("", "<down>", "<nop>", { noremap = true })
+vim.keymap.set("i", "<up>", "<nop>", { noremap = true })
+vim.keymap.set("i", "<down>", "<nop>", { noremap = true })
+
 -- Open config
 vim.keymap.set("n", "<leader>C", function()
 	vim.cmd("e " .. vim.fn.stdpath("config") .. "/init.lua")
