@@ -20,6 +20,7 @@ require("conform").setup({
 		css = { "prettier" },
 		javascript = { "prettier" },
 		typst = { "typstyle" },
+		sql = { "sleek" },
 	},
 	format_on_save = {
 		timeout_ms = 500,
