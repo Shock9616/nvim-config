@@ -36,16 +36,16 @@ require("lualine").setup({
 		lualine_b = { { "filetype", icon_only = true, padding = { left = 1, right = 0 } }, { "filename", path = 4 } },
 		lualine_c = {
 			{ "branch", icon = "" },
-			{ "diff", symbols = { added = "󰐙 ", modified = " ", removed = "󰍷 " }, colored = false },
+			{ "diff", symbols = { added = " ", modified = " ", removed = " " }, colored = false },
 		},
 		lualine_x = {
 			{
 				"diagnostics",
 				symbols = { error = " ", warn = " ", info = " ", hint = " " },
 				update_in_insert = true,
+			},
 		},
-		ualine_y = { "lsp_status" },
-		-- more
+		lualine_y = { "lsp_status" },
 		lualine_z = {
 			{
 				function()
