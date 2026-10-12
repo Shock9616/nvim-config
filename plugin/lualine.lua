@@ -36,7 +36,7 @@ require("lualine").setup({
 		lualine_b = { { "filetype", icon_only = true, padding = { left = 1, right = 0 } }, { "filename", path = 4 } },
 		lualine_c = {
 			{ "branch", icon = "" },
-			{ "diff", symbols = { added = " ", modified = " ", removed = " " }, colored = false },
+			{ "diff", symbols = { added = "󰐙 ", modified = " ", removed = "󰍷 " }, colored = false },
 		},
 		lualine_x = {
 			{
