@@ -1,6 +1,6 @@
 # Neovim Config
 
-<img width="841" height="600" alt="Screenshot 2026-02-04 at 10 56 12 AM" src="https://github.com/user-attachments/assets/2c3ca888-10cb-464a-8d97-463bc9b17499" />
+<img width="1341" height="956" alt="Screenshot 2026-10-12 at 12 34 09 AM" src="https://github.com/user-attachments/assets/a300375b-4d59-408e-b16d-090550425f2e" />
 
 This is my personal Neovim config. I primarily use it for note taking in
 markdown and programming course work at university, so configured language
