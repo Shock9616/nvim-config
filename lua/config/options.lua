@@ -65,9 +65,6 @@ vim.opt.updatetime = 250 -- Decrease update time
 vim.opt.mouse = ""
 vim.opt.mousescroll = "ver:0,hor:0"
 
--- Set python3 executable
-vim.g.python3_host_prog = vim.fn.stdpath("config") .. "/pynvim/bin/python3"
-
 -- Disable unused language providers
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_perl_provider = 0
