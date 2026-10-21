@@ -1,7 +1,7 @@
 {
   "plugins": {
     "blink.cmp": {
-      "rev": "8219b58f1c11a2fb1644d3c7116c509fa8348ec0",
+      "rev": "b72ed05dd452690181837d484984144a64709f17",
       "src": "https://github.com/saghen/blink.cmp"
     },
     "blink.lib": {
@@ -45,7 +45,7 @@
       "src": "https://github.com/selimacerbas/mdkite.nvim"
     },
     "mini.nvim": {
-      "rev": "8831fa150fa26492cfe135801fa498132f1491d2",
+      "rev": "4d84086ab334a88201b803d11d1086406fe7e43d",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "nvim": {
@@ -53,7 +53,7 @@
       "src": "https://github.com/catppuccin/nvim"
     },
     "nvim-treesitter": {
-      "rev": "1a4f47b03dfe92d28de7d5654c67327ef008c9e6",
+      "rev": "29212d826054bb2948fa9d3a99eca9bf6a050eb2",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "nvim-treesitter-textobjects": {
@@ -73,7 +73,7 @@
       "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
     },
     "smart-splits.nvim": {
-      "rev": "07dbad410256f755e69ffd31cb8d122bcd6b91f7",
+      "rev": "3629711db18279843618fda2e908700dcdc4b040",
       "src": "https://github.com/mrjones2014/smart-splits.nvim"
     },
     "todo-comments.nvim": {
@@ -93,7 +93,7 @@
       "src": "https://github.com/dhruvasagar/vim-table-mode"
     },
     "vimtex": {
-      "rev": "bd0788f13c23337dae815e21f1f283cb79753ac7",
+      "rev": "79a5fb444147f94a5284b6800030e17eecd18a06",
       "src": "https://github.com/lervag/vimtex"
     },
     "witch-line": {
