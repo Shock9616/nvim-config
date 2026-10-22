@@ -73,7 +73,7 @@
       "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
     },
     "smart-splits.nvim": {
-      "rev": "3629711db18279843618fda2e908700dcdc4b040",
+      "rev": "69ab668d96b54fa15907ac3245548fd8a3ce2318",
       "src": "https://github.com/mrjones2014/smart-splits.nvim"
     },
     "todo-comments.nvim": {
@@ -85,7 +85,7 @@
       "src": "https://github.com/folke/trouble.nvim"
     },
     "unimd": {
-      "rev": "d20496a09f9f3233083271599f88ed8cfbebf069",
+      "rev": "cdac3ad1838c3779c3246cea7ca7f2e95fd574e9",
       "src": "file:///Users/kalebrosborough/Documents/Programming/unimd-nvim/"
     },
     "vim-table-mode": {
