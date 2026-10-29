@@ -4,9 +4,14 @@
 -- Smart integration with multiplexers
 --
 
-vim.pack.add({ "https://github.com/mrjones2014/smart-splits.nvim" })
+vim.pack.add({
+	"https://github.com/mrjones2014/smart-splits.nvim",
+	"https://github.com/rawnly/smart-splits-backend-rex",
+})
 
-require("smart-splits").setup()
+require("smart-splits").setup({
+	mux = { backend = "smart-splits-backend-rex" },
+})
 
 -- Moving between splits
 vim.keymap.set("n", "<C-h>", require("smart-splits").move_cursor_left)

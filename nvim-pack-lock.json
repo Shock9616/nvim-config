@@ -1,7 +1,7 @@
 {
   "plugins": {
     "blink.cmp": {
-      "rev": "1e4cb39b9200950dca1cbc4d630c60c16eb8e7e4",
+      "rev": "74ebcf9a2daffd3d2eaaf13fa384c5caf337056e",
       "src": "https://github.com/saghen/blink.cmp"
     },
     "blink.lib": {
@@ -13,7 +13,7 @@
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "friendly-snippets": {
-      "rev": "b4d01b0fdf3c9a549961c2f9ffe8dc09be166219",
+      "rev": "b2ea5c41a150ba72fb656eedb4ed0a86d138d945",
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
     "gitsigns.nvim": {
@@ -45,7 +45,7 @@
       "src": "https://github.com/selimacerbas/mdkite.nvim"
     },
     "mini.nvim": {
-      "rev": "ed8683521996657ce774e5eec9d2f9b1b5ecef82",
+      "rev": "a03ad899bda446b5a81cfa99d8aeeb92241522f3",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "nvim": {
@@ -72,6 +72,10 @@
       "rev": "8e8795368391036643b622875a6da6a51bcd33f4",
       "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
     },
+    "smart-splits-backend-rex": {
+      "rev": "d15615e5c2deb237535884a921b0401dc2603533",
+      "src": "https://github.com/rawnly/smart-splits-backend-rex"
+    },
     "smart-splits.nvim": {
       "rev": "dd40c3a03ef71bcdf77fb4b14668cc1320293f48",
       "src": "https://github.com/mrjones2014/smart-splits.nvim"
@@ -85,8 +89,13 @@
       "src": "https://github.com/folke/trouble.nvim"
     },
     "unimd": {
-      "rev": "cdac3ad1838c3779c3246cea7ca7f2e95fd574e9",
-      "src": "file:///Users/kalebrosborough/Documents/Programming/unimd-nvim/"
+      "rev": "c08c57f66185e91dd0ec3abd78bf277df8170213",
+      "src": "file:///Users/kalebrosborough/Documents/Programming/unimd-nvim/",
+      "version": "'dev'"
+    },
+    "vim-be-good": {
+      "rev": "0ae3de14eb8efc6effe7704b5e46495e91931cc5",
+      "src": "https://github.com/theprimeagen/vim-be-good"
     },
     "vim-table-mode": {
       "rev": "bb025308a45c67c7c8f0763ba37bc2ee3f534df0",
